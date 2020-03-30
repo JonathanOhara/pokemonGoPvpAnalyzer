@@ -27,6 +27,8 @@ public class PokemonGoPvpAnalyzer {
 
 	private final boolean USE_CACHE = true;
 	private final boolean SHOW_DETAILS = true;
+	private final boolean IGNORE_WEIGHT = true;
+
 
 
 	private final League league;
@@ -63,7 +65,13 @@ public class PokemonGoPvpAnalyzer {
 		}
 
 		List<Score> orderedScore = new ArrayList<>(scores);
-		Collections.sort(orderedScore, Comparator.comparingInt(Score::sumWithWeight));
+
+		if( IGNORE_WEIGHT ){
+			Collections.sort(orderedScore, Comparator.comparingInt(Score::sum));
+		}else{
+			Collections.sort(orderedScore, Comparator.comparingInt(Score::sumWithWeight));
+		}
+
 
 		for(int i = 0; i < numberOfResults; i++){
 			Score score = orderedScore.get(i);
@@ -123,7 +131,7 @@ public class PokemonGoPvpAnalyzer {
 
 		System.out.println("Writing cache at: "+filePath);
 
-		properties.store(new FileOutputStream(filePath), null);
+		properties.store(new FileOutputStream(filePath), url);
 
 	}
 
