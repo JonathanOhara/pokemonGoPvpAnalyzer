@@ -27,7 +27,7 @@ public class PokemonGoPvpAnalyzer {
 
 	private final boolean USE_CACHE = true;
 	private final boolean SHOW_DETAILS = true;
-	private final boolean IGNORE_WEIGHT = true;
+	private final boolean IGNORE_WEIGHT = false;
 
 
 
@@ -43,8 +43,6 @@ public class PokemonGoPvpAnalyzer {
        	Set<Score> scores = new HashSet<>();
 
 		for (PokemonWithWeight commonPokemon : pokemonList) {
-
-
 			Set<Map.Entry<String, String>> pokemonScoreList =
 					getPokemonNameScoreMapOf(commonPokemon.getPokemonInLeague().getUrl(), commonPokemon.getPokemonInLeague().getSimpleName()).entrySet();
 
@@ -79,10 +77,13 @@ public class PokemonGoPvpAnalyzer {
 
 			output
 					.append("| ")
-					.append(String.format("%17s", score.getPokemonName()))
+					.append(String.format("%20s", score.getPokemonName()))
 					.append(" | ")
 					.append("Pt: ")
 					.append(score.sum())
+					.append(" | ")
+					.append("PtWe: ")
+					.append(score.sumWithWeight())
 					.append(" | ");
 
 
