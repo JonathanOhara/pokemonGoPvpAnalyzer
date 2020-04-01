@@ -10,8 +10,7 @@ import java.util.stream.Stream;
 public class App {
 
     private static final String DEFAULT_LEAGUE = "Ultra";
-    //private static final String DEFAULT_LEADS = "Swampert:11, Giratina (Altered):7, Snorlax:5, Melmetal:5, Venusaur:5, Togekiss:5";
-    private static final String DEFAULT_LEADS = "giratina_altered:45, swampert:26, venusaur:21, togekiss:17";
+    private static final String DEFAULT_LEADS = "swampert:16,poliwrath:9,venusaur:8,giratina_altered:8,snorlax:8,togekiss:7,muk_alolan:7,melmetal:6,articuno:6,clefable:6";
     private static final String NUMBER_OF_RESULTS = "50";
 
     public static void main(String[] args) throws IOException, InterruptedException {
