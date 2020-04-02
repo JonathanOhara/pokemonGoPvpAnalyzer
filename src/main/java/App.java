@@ -10,11 +10,10 @@ import java.util.stream.Stream;
 public class App {
 
     private static final String DEFAULT_LEAGUE = "Ultra";
-    private static final String DEFAULT_LEADS = "swampert:16,poliwrath:9,venusaur:8,giratina_altered:8,snorlax:8,togekiss:7,muk_alolan:7,melmetal:6,articuno:6,clefable:6";
-    private static final String NUMBER_OF_RESULTS = "50";
+    private static final String DEFAULT_LEADS = "swampert:18,giratina_altered:13,poliwrath:12,venusaur:10,articuno:10,snorlax:8,togekiss:8,muk_alolan:8\n";
+    private static final String NUMBER_OF_RESULTS = "25";
 
     public static void main(String[] args) throws IOException, InterruptedException {
-
         args = resolveArgs(args);
 
         League league = League.valueOf(args[0].toUpperCase());
@@ -54,9 +53,9 @@ public class App {
         String firstParam = args[0];
         if(firstParam.equals("help") || firstParam.equals("-h") || firstParam.equals("--help")) {
             System.out.println("Params: ");
-            System.out.println("PVP League.         Possible Values: Great, Ultra, Master ");
-            System.out.println("Leads.              Possible Values: Altaria, Swampert, Giratina (Altered).... ");
-            System.out.println("Nuber of Results.   Possible Values: 0....250 ");
+            System.out.println("PVP League.          Possible Values: Great, Ultra, Master ");
+            System.out.println("Leads.               Possible Values: Altaria, Swampert, Giratina (Altered).... ");
+            System.out.println("Number of Results.   Possible Values: 0....250 ");
         }else{
             System.out.println("Invalid argument, try help instead");
         }
