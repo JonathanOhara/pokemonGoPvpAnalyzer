@@ -29,13 +29,10 @@ public class PokemonGoPvpAnalyzer {
 	private final boolean SHOW_DETAILS = true;
 	private final boolean IGNORE_WEIGHT = false;
 
-
-
 	private final League league;
 
     public PokemonGoPvpAnalyzer(League league) {
 		this.league = league;
-
     }
 
     public void printBestCounter(List<PokemonWithWeight> pokemonList, int numberOfResults) throws IOException, InterruptedException {

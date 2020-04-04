@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 public class App {
 
     private static final String DEFAULT_LEAGUE = "Ultra";
-    private static final String DEFAULT_LEADS = "swampert:19,giratina_altered:14,poliwrath:12,venusaur:12,articuno:12,snorlax:10,togekiss:8,muk_alolan:8,melmetal:7";
+    private static final String DEFAULT_LEADS = "swampert:20,giratina_altered:16,venusaur:15,poliwrath:14,articuno:13,snorlax:10,melmetal:10,togekiss:9,muk_alolan:9\n";
     private static final String NUMBER_OF_RESULTS = "25";
 
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -23,7 +23,7 @@ public class App {
                     PokemonInLeague pokemonInLeague =
                             PokemonInLeague.getPokemonByName(league, pokemonName.split(":")[0].trim());
                     int weight = pokemonName.split(":").length == 2 ?
-                            Integer.parseInt(pokemonName.split(":")[1]) : 1;
+                            Integer.parseInt(pokemonName.split(":")[1].replace("\n","")) : 1;
                     return new PokemonWithWeight(pokemonInLeague, weight);
                 })
                 .collect(Collectors.toList());
