@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import util.StringUtil;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -23,11 +24,14 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static util.StringUtil.formatAndTruncate;
+
 public class PokemonGoPvpAnalyzer {
 
 	private final boolean USE_CACHE = true;
 	private final boolean SHOW_DETAILS = true;
 	private final boolean IGNORE_WEIGHT = false;
+	private boolean NORMALIZE_WIN_VALUE_RATIO = true;
 
 	private final League league;
 
@@ -52,7 +56,7 @@ public class PokemonGoPvpAnalyzer {
 
 				score.add(
 						commonPokemon.getPokemonInLeague().getSimpleName(),
-						Integer.parseInt(pokemonScore.getValue())
+						getMatchupScoreValue(pokemonScore)
 				);
 
 				scores.add(score);
@@ -74,7 +78,7 @@ public class PokemonGoPvpAnalyzer {
 
 			output
 					.append("| ")
-					.append(String.format("%20s", score.getPokemonName()))
+					.append(formatAndTruncate(score.getPokemonName(), 10))
 					.append(" | ")
 					.append("Pt: ")
 					.append(score.sum())
@@ -89,7 +93,7 @@ public class PokemonGoPvpAnalyzer {
 
 				score.getResults().forEach(s ->
 						output
-								.append(String.format("%17s", s.getPokemonName()))
+								.append(formatAndTruncate(s.getPokemonName(), 10))
 								.append(": ")
 								.append(String.format("%4s", s.getBattleScore()))
 								.append(" ")
@@ -102,7 +106,27 @@ public class PokemonGoPvpAnalyzer {
 		}
     }
 
-    private Map<String, String> getPokemonNameScoreMapOf(String url, String pokemonSimpleName) throws InterruptedException, IOException {
+	private int getMatchupScoreValue(Map.Entry<String, String> pokemonScore) {
+		int value = Integer.parseInt(pokemonScore.getValue());
+
+		if(NORMALIZE_WIN_VALUE_RATIO) {
+			if (value < 300) {
+				value = -2;
+			} else if (value < 475) {
+				value = -1;
+			} else if (value < 525) {
+				value = 0;
+			} else if (value < 700) {
+				value = 1;
+			} else {
+				value = 2;
+			}
+		}
+
+		return value;
+	}
+
+	private Map<String, String> getPokemonNameScoreMapOf(String url, String pokemonSimpleName) throws InterruptedException, IOException {
     	Map<String, String> pokemonScore = new LinkedHashMap<>();
 
     	if(USE_CACHE){
