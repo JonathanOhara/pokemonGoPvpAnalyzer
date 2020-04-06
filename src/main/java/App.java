@@ -7,11 +7,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+//https://pvpoke.com/team-builder/all/2500/articuno-m-1-5-0%2Cgyarados-m-1-4-1%2Cmelmetal-m-0-4-3
 public class App {
 
     private static final String DEFAULT_LEAGUE = "Ultra";
-    private static final String DEFAULT_LEADS = "swampert:23,giratina_altered:19,venusaur:18,poliwrath:14,articuno:13,snorlax:12,melmetal:10,muk_alolan:10,togekiss:9,charizard:9\n";
-    private static final String NUMBER_OF_RESULTS = "25";
+    private static final String DEFAULT_LEADS = "swampert:27,giratina_altered:23,venusaur:17,articuno:16,poliwrath:15,snorlax:13,muk_alolan:13,melmetal:13\n";
+    private static final String NUMBER_OF_RESULTS = "30";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         args = resolveArgs(args);

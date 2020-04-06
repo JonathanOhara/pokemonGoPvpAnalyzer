@@ -31,7 +31,7 @@ public class PokemonGoPvpAnalyzer {
 	private final boolean USE_CACHE = true;
 	private final boolean SHOW_DETAILS = true;
 	private final boolean IGNORE_WEIGHT = false;
-	private boolean NORMALIZE_WIN_VALUE_RATIO = true;
+	private boolean NORMALIZE_WIN_VALUE_RATIO = false;
 
 	private final League league;
 
@@ -71,6 +71,7 @@ public class PokemonGoPvpAnalyzer {
 			Collections.sort(orderedScore, Comparator.comparingInt(Score::sumWithWeight));
 		}
 
+		System.out.println("");
 
 		for(int i = 0; i < numberOfResults; i++){
 			Score score = orderedScore.get(i);
