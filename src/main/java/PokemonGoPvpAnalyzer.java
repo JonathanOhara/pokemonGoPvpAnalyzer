@@ -79,7 +79,7 @@ public class PokemonGoPvpAnalyzer {
 
 			output
 					.append("| ")
-					.append(formatAndTruncate(score.getPokemonName(), 10))
+					.append(formatAndTruncate(score.getPokemonName(), 11))
 					.append(" | ")
 					.append("Pt: ")
 					.append(score.sum())
@@ -94,7 +94,7 @@ public class PokemonGoPvpAnalyzer {
 
 				score.getResults().forEach(s ->
 						output
-								.append(formatAndTruncate(s.getPokemonName(), 10))
+								.append(formatAndTruncate(s.getPokemonName(), 11))
 								.append(": ")
 								.append(String.format("%4s", s.getBattleScore()))
 								.append(" ")

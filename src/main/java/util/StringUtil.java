@@ -8,6 +8,6 @@ public class StringUtil {
         if(returnValue.length() > trucanteAt){
             returnValue = returnValue.substring(0, trucanteAt);
         }
-        return String.format("%10s", returnValue);
+        return String.format("%"+trucanteAt+"s", returnValue);
     }
 }
