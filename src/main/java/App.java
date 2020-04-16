@@ -14,7 +14,7 @@ https://pvpoke.com/team-builder/all/10000/giratina_origin-40-15-15-15-4-4-1-m-1-
 public class App {
 
     private static final String DEFAULT_LEAGUE = "Master";
-    private static final String DEFAULT_LEADS = "giratina_origin:29,melmetal:27,dialga:21,kyogre:20,togekiss:13,machamp:11\n";
+    private static final String DEFAULT_LEADS = "melmetal:37,dialga:37,giratina_origin:35,kyogre:26,togekiss:16";
     private static final String NUMBER_OF_RESULTS = "30";
 
     public static void main(String[] args) throws IOException, InterruptedException {
