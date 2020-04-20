@@ -14,7 +14,7 @@ https://pvpoke.com/team-builder/all/10000/rhyperior-40-15-15-15-4-4-1-m-0-2-6%2C
 public class App {
 
     private static final String DEFAULT_LEAGUE = "Master";
-    private static final String DEFAULT_LEADS = "melmetal:47,dialga:45,giratina_origin:42,kyogre:33,togekiss:24\n";
+    private static final String DEFAULT_LEADS = "melmetal:52,dialga:50,giratina_origin:44,kyogre:35,togekiss:24\n";
     private static final String NUMBER_OF_RESULTS = "50";
 
     public static void main(String[] args) throws IOException, InterruptedException {
