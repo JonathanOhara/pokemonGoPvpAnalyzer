@@ -9,12 +9,19 @@ import java.util.stream.Stream;
 
 /*
 My teams:
-https://pvpoke.com/team-builder/all/10000/rhyperior-40-15-15-15-4-4-1-m-0-2-6%2Cdragonite-40-15-15-15-4-4-1-m-0-2-6%2Cgiratina_origin-40-15-15-15-4-4-1-m-1-3-2
+https://pvpoke.com/team-builder/all/10000/rhyperior-40-15-14-15-4-4-1-m-0-2-6%2Cdragonite-41-15-15-15-4-4-1-m-0-2-6%2Cmelmetal-40-15-14-15-4-4-1-m-0-4-5
+rhyperior,SMACK_DOWN,ROCK_WRECKER,SURF,40,15,15,14
+dragonite,DRAGON_BREATH,OUTRAGE,DRAGON_CLAW,41,15,15,15
+melmetal,THUNDER_SHOCK,SUPER_POWER,THUNDERBOLT,40,15,14,15
+
+rhyperior,MUD_SLAP,ROCK_WRECKER,SURF,40,15,15,14
+dialga,DRAGON_BREATH,IRON_HEAD,none,40,14,14,15
+giratina_origin,SHADOW_CLAW,SHADOW_BALL,DRAGON_PULSE,41,14,13,15
  */
 public class App {
 
     private static final String DEFAULT_LEAGUE = "Master";
-    private static final String DEFAULT_LEADS = "melmetal:52,dialga:50,giratina_origin:44,kyogre:35,togekiss:24\n";
+    private static final String DEFAULT_LEADS = "melmetal:63,dialga:60,giratina_origin:53,kyogre:37\n";
     private static final String NUMBER_OF_RESULTS = "50";
 
     public static void main(String[] args) throws IOException, InterruptedException {
