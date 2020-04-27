@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import util.StringUtil;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -14,7 +13,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -28,10 +26,13 @@ import static util.StringUtil.formatAndTruncate;
 
 public class PokemonGoPvpAnalyzer {
 
-	private final boolean USE_CACHE = true;
-	private final boolean SHOW_DETAILS = true;
-	private final boolean IGNORE_WEIGHT = false;
-	private boolean NORMALIZE_WIN_VALUE_RATIO = true;
+	private final boolean DEBUG 					= false;
+
+	private final boolean USE_CACHE 				= true;
+	private final boolean NORMALIZE_WIN_VALUE_RATIO = true;
+
+	private final boolean SHOW_DETAILS 				= true;
+	private final boolean IGNORE_WEIGHT 			= false;
 
 	private final League league;
 
@@ -39,31 +40,32 @@ public class PokemonGoPvpAnalyzer {
 		this.league = league;
     }
 
-    public void printBestCounter(List<PokemonWithWeight> pokemonList, int numberOfResults) throws IOException, InterruptedException {
+    public void printBestCounter(List<PokemonWithWeight> pokemonList, int numberOfShields, int numberOfResults) throws IOException, InterruptedException {
 
-       	Set<Score> scores = new HashSet<>();
+       	Set<Score> inputPokemonScore = new HashSet<>();
 
-		for (PokemonWithWeight commonPokemon : pokemonList) {
+		for (PokemonWithWeight weightedInput : pokemonList) {
+			PokemonInLeague inputPokemon = weightedInput.getPokemonInLeague();
 			Set<Map.Entry<String, String>> pokemonScoreList =
-					getPokemonNameScoreMapOf(commonPokemon.getPokemonInLeague().getUrl(), commonPokemon.getPokemonInLeague().getSimpleName()).entrySet();
+					getPokemonNameScoreMapOf(inputPokemon.getUrl(numberOfShields), inputPokemon.getSimpleName()).entrySet();
 
 			for (Map.Entry<String, String> pokemonScore : pokemonScoreList) {
 				String pokemonSimpleName = pokemonScore.getKey();
 
-				Score score = scores.stream()
+				Score score = inputPokemonScore.stream()
 						.filter(score1 -> score1.getPokemonName().equals(pokemonSimpleName)).findFirst()
-						.orElse(new Score(pokemonSimpleName, commonPokemon.getWeight()));
+						.orElse(new Score(pokemonSimpleName, weightedInput.getWeight()));
 
 				score.add(
-						commonPokemon.getPokemonInLeague().getSimpleName(),
+						inputPokemon.getSimpleName(),
 						getMatchupScoreValue(pokemonScore)
 				);
 
-				scores.add(score);
+				inputPokemonScore.add(score);
 			}
 		}
 
-		List<Score> orderedScore = new ArrayList<>(scores);
+		List<Score> orderedScore = new ArrayList<>(inputPokemonScore);
 
 		if( IGNORE_WEIGHT ){
 			Collections.sort(orderedScore, Comparator.comparingInt(Score::sum));
@@ -113,9 +115,9 @@ public class PokemonGoPvpAnalyzer {
 		if(NORMALIZE_WIN_VALUE_RATIO) {
 			if (value < 300) {
 				value = -2;
-			} else if (value < 475) {
+			} else if (value < 480) {
 				value = -1;
-			} else if (value < 525) {
+			} else if (value < 520) {
 				value = 0;
 			} else if (value < 700) {
 				value = 1;
@@ -130,32 +132,44 @@ public class PokemonGoPvpAnalyzer {
 	private Map<String, String> getPokemonNameScoreMapOf(String url, String pokemonSimpleName) throws InterruptedException, IOException {
     	Map<String, String> pokemonScore = new LinkedHashMap<>();
 
+    	String cacheName = createCacheNameFor(pokemonSimpleName, url);
+
+		if(DEBUG){
+			System.out.println("Pokemon:    " + pokemonSimpleName);
+			System.out.println("Cache Name: " + cacheName);
+		}
+
     	if(USE_CACHE){
-			pokemonScore = getPokemonScoreFromCache(pokemonSimpleName);
+			pokemonScore = getPokemonScoreFromCache(cacheName);
 		}
 
     	if(pokemonScore.isEmpty()){
 			pokemonScore = getPokemonScoreFromHttp(url);
-			updateCache(url, pokemonSimpleName, pokemonScore);
+			updateCache(url, cacheName, pokemonScore);
 		}
 
 		return pokemonScore;
 
 	}
 
-	private void updateCache(String url, String simpleName, Map<String, String> pokemonScore) throws IOException {
+	private String createCacheNameFor(String pokemonName, String url) {
+		String subUrl = url.substring(url.indexOf(pokemonName.toLowerCase()));
+
+		return subUrl.replaceAll("/", "_");
+	}
+
+	private void updateCache(String url, String cacheName, Map<String, String> pokemonScore) throws IOException {
 		String projectPath = new File(".").getCanonicalPath();
     	Properties properties = new Properties();
 		properties.putAll(pokemonScore);
 
 		String filePath = projectPath
 				+ "/src/main/resources/"
-				+ getCachePath(simpleName);
+				+ getCachePath(cacheName);
 
 		System.out.println("Writing cache at: "+filePath);
 
 		properties.store(new FileOutputStream(filePath), url);
-
 	}
 
 	private String getCachePath(String simpleName) throws IOException {
@@ -172,16 +186,16 @@ public class PokemonGoPvpAnalyzer {
 		return filePath.toString();
 	}
 
-	private Map<String, String> getPokemonScoreFromCache(String simpleName) throws IOException {
-		System.out.println("Reading data from cache for "+simpleName);
+	private Map<String, String> getPokemonScoreFromCache(String cacheName) throws IOException {
+		System.out.println("Reading data from cache for "+cacheName);
 
-		String cachePath = getCachePath(simpleName);
+		String cachePath = getCachePath(cacheName);
 
 		Properties prop = new Properties();
 		InputStream in = getClass().getResourceAsStream(cachePath);
 
 		if(in == null){
-			return new HashMap<>();
+			return new LinkedHashMap<>();
 		}
 
 		prop.load(in);
@@ -215,6 +229,9 @@ public class PokemonGoPvpAnalyzer {
 
 		for (WebElement scoreElement : scoreElements) {
 			pokemonScore.put( scoreElement.getAttribute("data"), scoreElement.findElement(By.cssSelector(".star")).getText() );
+			if(DEBUG){
+				System.out.println("\tx "+scoreElement.getAttribute("data") + ": "+scoreElement.findElement(By.cssSelector(".star")).getText());
+			}
 		}
 
 		driver.close();

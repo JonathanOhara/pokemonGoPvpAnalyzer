@@ -7,18 +7,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/*
-My teams:
-https://pvpoke.com/team-builder/all/10000/mamoswine-40-15-14-15-4-4-1-m-1-2-3%2Cgiratina_origin-41-14-13-15-4-4-1-m-1-3-1%2Cmelmetal-40-15-14-15-4-4-1-m-0-4-5
-
-mamoswine,POWDER_SNOW,AVALANCHE,BULLDOZE,40,15,14,15
-giratina_origin,SHADOW_CLAW,SHADOW_BALL,DRAGON_PULSE,41,14,13,15
-melmetal,THUNDER_SHOCK,SUPER_POWER,THUNDERBOLT,40,15,14,15
- */
 public class App {
 
+    private static final String SEARCH_STRING = "melmetal:57,giratina_origin:56,dialga:51,togekiss:37,kyogre:27\n";
+
     private static final String DEFAULT_LEAGUE = "Master";
-    private static final String DEFAULT_LEADS = "dialga,kyogre\n";
+    private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
     private static final String NUMBER_OF_RESULTS = "50";
 
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -40,19 +34,22 @@ public class App {
 
         pokemonGoPvpAnalyzer.printBestCounter(
                 pokemonInLeagueList,
-                Integer.parseInt(args[2])
+                Integer.parseInt(args[2]),
+                Integer.parseInt(args[3])
         );
     }
 
     private static String[] resolveArgs(String[] args) {
         if(args.length == 0){
             printDefaultMessage();
-            args = new String[]{DEFAULT_LEAGUE, DEFAULT_LEADS, NUMBER_OF_RESULTS};
+            args = new String[]{DEFAULT_LEAGUE, SEARCH_STRING, DEFAULT_NUMBER_OF_SHIELDS, NUMBER_OF_RESULTS};
         }else if(args.length == 1){
             printHelpMessage(args);
             System.exit(0);
         }else if(args.length == 2){
-            args = new String[]{args[0], args[1], NUMBER_OF_RESULTS};
+            args = new String[]{args[0], args[1], DEFAULT_NUMBER_OF_SHIELDS, NUMBER_OF_RESULTS};
+        }else if(args.length == 3){
+            args = new String[]{args[0], args[1], args[2], NUMBER_OF_RESULTS};
         }
         return args;
     }
@@ -63,6 +60,7 @@ public class App {
             System.out.println("Params: ");
             System.out.println("PVP League.          Possible Values: Great, Ultra, Master ");
             System.out.println("Leads.               Possible Values: Altaria, Swampert, Giratina (Altered).... ");
+            System.out.println("Number of Shields.   Possible Values: 0....2 ");
             System.out.println("Number of Results.   Possible Values: 0....250 ");
         }else{
             System.out.println("Invalid argument, try help instead");
@@ -73,7 +71,7 @@ public class App {
         System.out.println("Using Default parameters. Use \"help\" to check the parameters");
         System.out.println("Default params: ");
         System.out.println("League: "+DEFAULT_LEAGUE);
-        System.out.println("Leads: "+DEFAULT_LEADS);
+        System.out.println("Leads: "+ SEARCH_STRING);
         System.out.println("Number of Results: "+NUMBER_OF_RESULTS);
     }
 }

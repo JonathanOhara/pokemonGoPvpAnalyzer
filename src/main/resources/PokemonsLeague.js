@@ -14,6 +14,8 @@ $(".rankings-container > .rank").each( function(){
     var name = pokemonRow.find(".name").html();
     var detailsUrl = pokemonRow.find(".multi-battle-link a").attr("href");
 
+    detailsUrl = detailsUrl.replace("/11/","/{shields}/")
+
     console.log(simpleName);
 
     finalString +=

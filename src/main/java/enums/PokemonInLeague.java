@@ -4,7 +4,7 @@ public interface PokemonInLeague {
 
     String getDisplayName();
     String getSimpleName();
-    String getUrl();
+    String getUrl(int numberOfShields);
 
     default boolean equalsBothNames(String name){
         return getSimpleName().equalsIgnoreCase(name) || getDisplayName().equalsIgnoreCase(name);
