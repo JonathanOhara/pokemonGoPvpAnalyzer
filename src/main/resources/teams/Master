@@ -17,3 +17,10 @@ https://pvpoke.com/team-builder/all/10000/groudon-40-13-15-14-4-4-1-m-1-1-0%2Cdi
 groudon,MUD_SHOT,EARTHQUAKE,none,40,13,15,14
 dialga,DRAGON_BREATH,IRON_HEAD,none,41,14,14,15
 giratina_origin,SHADOW_CLAW,SHADOW_BALL,DRAGON_PULSE,40,14,13,15
+
+https://pvpoke.com/team-builder/all/10000/melmetal-m-0-4-3%2Cdialga-41-14-14-15-4-4-1-m-0-2-1%2Cgiratina_origin-m-1-1-2
+melmetal,THUNDER_SHOCK,SUPER_POWER,ROCK_SLIDE
+dialga,DRAGON_BREATH,IRON_HEAD,DRACO_METEOR,41,14,14,15
+giratina_origin,SHADOW_CLAW,DRAGON_PULSE,OMINOUS_WIND
+
+
