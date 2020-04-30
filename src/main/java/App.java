@@ -9,10 +9,10 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String SEARCH_STRING = "melmetal:105,giratina_origin:102,dialga:96,togekiss:58,kyogre:56\n";
+    private static final String SEARCH_STRING = "melmetal:108,giratina_origin:107,dialga:101,kyogre:62,togekiss:60\n";
 
     private static final String DEFAULT_LEAGUE = "Master";
-    private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
+    private static final String DEFAULT_NUMBER_OF_SHIELDS = "2";
     private static final String NUMBER_OF_RESULTS = "50";
 
     public static void main(String[] args) throws IOException, InterruptedException {
