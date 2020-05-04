@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String SEARCH_STRING = "giratina_origin:46,dialga:43,melmetal:38,togekiss:17,kyogre:16\n";
+    private static final String SEARCH_STRING = "dialga:45,melmetal:34,giratina_origin:46,togekiss:20,kyogre:17\n";
 
     private static final String DEFAULT_LEAGUE = "Master";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
