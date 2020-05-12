@@ -15,4 +15,10 @@ public interface PokemonInLeague {
                 .filter(pokemon -> pokemon.equalsBothNames(name))
                 .findFirst().orElseThrow(() -> new RuntimeException(name + " not found"));
     }
+
+    static boolean hasPokemon(League league, String name){
+        return league.getAvailablePokemon().stream()
+                .filter(pokemon -> pokemon.equalsBothNames(name))
+                .count() > 0;
+    }
 }

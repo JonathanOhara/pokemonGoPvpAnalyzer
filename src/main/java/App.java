@@ -9,10 +9,9 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String SEARCH_STRING = "dialga:155,giratina_origin:150,melmetal:146,togekiss:84,kyogre:79\n";
-//    private static final String SEARCH_STRING = "overall";
+    private static final String SEARCH_STRING = "altaria:3,azumarill:3,registeel:2\n";
 
-    private static final String DEFAULT_LEAGUE = "Master";
+    private static final String DEFAULT_LEAGUE = "Great";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
     private static final String NUMBER_OF_RESULTS = "50";
 
@@ -31,7 +30,7 @@ public class App {
                 })
                 .collect(Collectors.toList());
 
-        PokemonGoPvpAnalyzer pokemonGoPvpAnalyzer = new PokemonGoPvpAnalyzer(league);
+        PokemonGoPvpBattleAnalyzer pokemonGoPvpAnalyzer = new PokemonGoPvpBattleAnalyzer(league);
 
         pokemonGoPvpAnalyzer.printBestCounter(
                 pokemonInLeagueList,

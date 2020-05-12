@@ -5,18 +5,23 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public enum League {
-    GREAT(PokemonsGreatLeague::values),
-    ULTRA(PokemonsUltraLeague::values),
-    MASTER(PokemonsMasterLeague::values)
-    ;
+    GREAT(1500, PokemonsGreatLeague::values),
+    ULTRA(2500, PokemonsUltraLeague::values),
+    MASTER(10000, PokemonsMasterLeague::values);
 
     private List<PokemonInLeague> availablePokemon;
+    private int maxCp;
 
-    League(Supplier<PokemonInLeague[]> pokemonSupplier){
+    League(int maxCP, Supplier<PokemonInLeague[]> pokemonSupplier){
+        this.maxCp = maxCP;
         availablePokemon = Arrays.asList(pokemonSupplier.get());
     }
 
     public List<PokemonInLeague> getAvailablePokemon() {
         return availablePokemon;
+    }
+
+    public int getMaxCp() {
+        return maxCp;
     }
 }

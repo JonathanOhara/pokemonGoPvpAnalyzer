@@ -24,19 +24,19 @@ import java.util.stream.Collectors;
 
 import static util.StringUtil.formatAndTruncate;
 
-public class PokemonGoPvpAnalyzer {
+public class PokemonGoPvpBattleAnalyzer {
 
 	private final boolean DEBUG 					= false;
 
 	private final boolean USE_CACHE 				= true;
-	private final boolean NORMALIZE_WIN_VALUE_RATIO = true;
+	private final boolean NORMALIZE_WIN_VALUE_RATIO = false;
 
 	private final boolean SHOW_DETAILS 				= true;
 	private final boolean IGNORE_WEIGHT 			= false;
 
 	private final League league;
 
-    public PokemonGoPvpAnalyzer(League league) {
+    public PokemonGoPvpBattleAnalyzer(League league) {
 		this.league = league;
     }
 
@@ -81,7 +81,7 @@ public class PokemonGoPvpAnalyzer {
 
 			output
 					.append("| ")
-					.append(formatAndTruncate(score.getPokemonName(), 11))
+					.append(formatAndTruncate(score.getPokemonName(), 12))
 					.append(" | ")
 					.append("Pt: ")
 					.append(score.sum())
@@ -96,7 +96,7 @@ public class PokemonGoPvpAnalyzer {
 
 				score.getResults().forEach(s ->
 						output
-								.append(formatAndTruncate(s.getPokemonName(), 11))
+								.append(formatAndTruncate(s.getPokemonName(), 12))
 								.append(": ")
 								.append(String.format("%4s", s.getBattleScore()))
 								.append(" ")
