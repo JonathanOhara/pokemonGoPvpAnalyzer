@@ -40,8 +40,7 @@ public class PokemonGoPvpStatsAnalyzer {
 	}
 
 	public void printByOverallStats() throws IOException, InterruptedException {
-		Set<PokemonOverallStat> pokemonStats =
-				new TreeSet<>(Comparator.comparingLong(PokemonOverallStat::getOverallStat));
+		List<PokemonOverallStat> pokemonStats = new ArrayList<>(league.getAvailablePokemon().size());
 
 		System.setProperty("webdriver.gecko.driver","C:\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
@@ -87,6 +86,8 @@ public class PokemonGoPvpStatsAnalyzer {
 		}
 		driver.close();
 
+		pokemonStats.sort(Comparator.comparingLong(PokemonOverallStat::getOverallStat));
+		System.out.println("*******************************************");
 		pokemonStats.forEach(p -> System.out.println(p));
 	}
 }

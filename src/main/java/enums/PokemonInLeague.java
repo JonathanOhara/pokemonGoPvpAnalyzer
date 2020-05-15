@@ -17,8 +17,11 @@ public interface PokemonInLeague {
     }
 
     static boolean hasPokemon(League league, String name){
-        return league.getAvailablePokemon().stream()
+        boolean has = league.getAvailablePokemon().stream()
                 .filter(pokemon -> pokemon.equalsBothNames(name))
                 .count() > 0;
+
+        System.out.println("Name: "+name+ " has: "+has);
+        return has;
     }
 }
