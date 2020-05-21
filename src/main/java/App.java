@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String SEARCH_STRING = "azumarill:23,registeel:19,altaria:19,skarmory:13,hypno:10,umbreon:10\n";
+    private static final String SEARCH_STRING = "azumarill:23,registeel:20,altaria:19,skarmory:13,hypno:10,umbreon:10,toxicroak:9,swampert:9,deoxys_defense:9\n";
 
     private static final String DEFAULT_LEAGUE = "Great";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
