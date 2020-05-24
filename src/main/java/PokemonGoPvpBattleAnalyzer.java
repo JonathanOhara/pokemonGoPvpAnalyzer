@@ -34,6 +34,8 @@ public class PokemonGoPvpBattleAnalyzer {
 	private final boolean SHOW_DETAILS 				= true;
 	private final boolean IGNORE_WEIGHT 			= false;
 
+	private final boolean SHOW_SHADOW_POKEMON		= false;
+
 	private final League league;
 
     public PokemonGoPvpBattleAnalyzer(League league) {
@@ -73,13 +75,19 @@ public class PokemonGoPvpBattleAnalyzer {
 			Collections.sort(orderedScore, Comparator.comparingInt(Score::sumWithWeight));
 		}
 
+		if( !SHOW_SHADOW_POKEMON ){
+			orderedScore = orderedScore.stream().filter(score -> !score.getPokemonName().contains("_shadow")).collect(Collectors.toList());
+		}
+
 		System.out.println("");
 
 		for(int i = 0; i < numberOfResults; i++){
 			Score score = orderedScore.get(i);
+
 			StringBuilder output = new StringBuilder();
 
 			output
+					.append(String.format("%2d", i+1))
 					.append("| ")
 					.append(formatAndTruncate(score.getPokemonName(), 12))
 					.append(" | ")
