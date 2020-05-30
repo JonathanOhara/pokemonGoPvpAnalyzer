@@ -87,7 +87,7 @@ public class PokemonGoPvpBattleAnalyzer {
 			StringBuilder output = new StringBuilder();
 
 			output
-					.append(String.format("%2d", i+1))
+					.append(String.format("%3d", i+1))
 					.append("| ")
 					.append(formatAndTruncate(score.getPokemonName(), 12))
 					.append(" | ")
