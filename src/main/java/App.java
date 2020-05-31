@@ -9,10 +9,10 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String SEARCH_STRING = "azumarill:38,altaria:34,registeel:31,deoxys_defense:15,stunfisk:15,skarmory:14,meganium:14,swampert:12,umbreon:11,vigoroth:11,shiftry:11\n";
+    private static final String SEARCH_STRING = "azumarill:32,altaria:31,registeel:28,stunfisk:16,deoxys_defense:15,skarmory:14,meganium:11,shiftry:10\n";
 
     private static final String DEFAULT_LEAGUE = "Great";
-    private static final String DEFAULT_NUMBER_OF_SHIELDS = "0";
+    private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
     private static final String NUMBER_OF_RESULTS = "99";
 
     public static void main(String[] args) throws IOException, InterruptedException {
