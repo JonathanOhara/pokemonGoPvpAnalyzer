@@ -1,37 +1,24 @@
 import enums.League;
-import enums.PokemonInLeague;
 import model.PokemonOverallStat;
-import model.PokemonWithWeight;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.PriorityQueue;
-import java.util.Properties;
-import java.util.Set;
-import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 import static enums.PokemonInLeague.hasPokemon;
-import static util.StringUtil.formatAndTruncate;
 
 public class PokemonGoPvpStatsAnalyzer {
 
-	private final boolean DEBUG 					= true;
+	private final boolean SHOW_SHADOW_POKEMON		= false;
+
+	private final boolean DEBUG 					= false;
 
 	private final League league;
 
@@ -70,6 +57,9 @@ public class PokemonGoPvpStatsAnalyzer {
 
 		for(WebElement webElement: filteredOptions){
 			String pokemonSimpleName = webElement.getAttribute("value");
+
+			if (pokemonSimpleName.contains("_shadow") && !SHOW_SHADOW_POKEMON) continue;
+
 			pokemonSelect.selectByValue(pokemonSimpleName);
 
 			long overallStat = Long.parseLong(driver.findElement(

@@ -1,15 +1,10 @@
 import enums.League;
-import enums.PokemonInLeague;
-import model.PokemonWithWeight;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class OtherApp {
 
-    private static final String DEFAULT_LEAGUE = "Great";
+    private static final String DEFAULT_LEAGUE = "Ultra";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         args = resolveArgs(args);

@@ -21,7 +21,6 @@ public interface PokemonInLeague {
                 .filter(pokemon -> pokemon.equalsBothNames(name))
                 .count() > 0;
 
-        System.out.println("Name: "+name+ " has: "+has);
         return has;
     }
 }

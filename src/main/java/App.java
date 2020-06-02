@@ -9,9 +9,9 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String SEARCH_STRING = "azumarill:56,altaria:50,registeel:47,skarmory:23,deoxys_defense:23,stunfisk:23,umbreon:19\n";
+    private static final String SEARCH_STRING = "cresselia:4,registeel:4,giratina_altered:3,swampert:3,lapras:2\n";
 
-    private static final String DEFAULT_LEAGUE = "Great";
+    private static final String DEFAULT_LEAGUE = "Ultra";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
     private static final String NUMBER_OF_RESULTS = "99";
 
