@@ -14,7 +14,6 @@ public class OtherApp {
         PokemonGoPvpStatsAnalyzer pokemonGoPvpStatsAnalyzer  = new PokemonGoPvpStatsAnalyzer(league);
 
         pokemonGoPvpStatsAnalyzer.printByOverallStats();
-
     }
 
     private static String[] resolveArgs(String[] args) {
