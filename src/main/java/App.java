@@ -9,11 +9,11 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String SEARCH_STRING = "cresselia:24,swampert:14,giratina_altered:14,registeel:12,melmetal:11,escavalier:9\n";
+    private static final String SEARCH_STRING = "cresselia:19,swampert:11,escavalier:9,melmetal:9,giratina_altered:8,registeel:8,obstagoon:7,articuno:7\n";
 
     private static final String DEFAULT_LEAGUE = "Ultra";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
-    private static final String NUMBER_OF_RESULTS = "99";
+    private static final String NUMBER_OF_RESULTS = "50";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         args = resolveArgs(args);

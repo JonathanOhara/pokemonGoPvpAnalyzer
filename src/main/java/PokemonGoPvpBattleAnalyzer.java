@@ -35,6 +35,7 @@ public class PokemonGoPvpBattleAnalyzer {
 	private final boolean IGNORE_WEIGHT 			= false;
 
 	private final boolean SHOW_SHADOW_POKEMON		= false;
+	private final boolean DISABLE_BAIT_SHIELDS		= false;
 
 	private final League league;
 
@@ -189,6 +190,8 @@ public class PokemonGoPvpBattleAnalyzer {
 				.append(league.toString().toLowerCase())
 				.append("/")
 				.append(simpleName.toLowerCase())
+				.append("bait_")
+				.append(!DISABLE_BAIT_SHIELDS)
 				.append(".properties");
 
 		return filePath.toString();
@@ -232,6 +235,26 @@ public class PokemonGoPvpBattleAnalyzer {
 			System.out.print(".");
 		}while(driver.findElements(By.cssSelector(".rankings-container > div")).size() == 0);
 		System.out.println();
+
+		if(DISABLE_BAIT_SHIELDS){
+			System.out.print("Disabling Shield baiting...");
+			//expand form
+			driver.findElement(By.cssSelector("div.poke:nth-child(1) > div:nth-child(5) > div:nth-child(11) > a:nth-child(3)")).click();
+
+			//disable button 1
+			driver.findElement(By.cssSelector("#main > div.section.poke-select-container.multi > div:nth-child(1) > div.poke-stats > div.options > div.toggle-content > div.check.shield-baiting > span")).click();
+
+			//disable button 2
+			driver.findElement(By.cssSelector("#main > div.section.poke-select-container.multi > div:nth-child(3) > div > div.options > div > span")).click();
+
+			//Re run battles
+			driver.findElement(By.cssSelector("#main > div.section.battle > button.battle-btn.button")).click();
+
+			do{
+				Thread.sleep(500);
+				System.out.print(".");
+			}while(driver.findElements(By.cssSelector(".rankings-container > div")).size() == 0);
+		}
 
 		List<WebElement> scoreElements = driver.findElements(By.cssSelector(".rankings-container > .rank"));
 
