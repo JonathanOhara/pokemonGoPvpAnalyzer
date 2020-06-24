@@ -35,7 +35,7 @@ public class PokemonGoPvpBattleAnalyzer {
 	private final boolean IGNORE_WEIGHT 			= false;
 
 	private final boolean SHOW_SHADOW_POKEMON		= false;
-	private final boolean DISABLE_BAIT_SHIELDS		= false;
+	private final boolean DISABLE_BAIT_SHIELDS		= true;
 
 	private final League league;
 
