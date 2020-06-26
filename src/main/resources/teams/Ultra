@@ -11,9 +11,10 @@ cresselia,PSYCHO_CUT,MOONBLAST,GRASS_KNOT,33,11,15,12
 charizard,FIRE_SPIN,BLAST_BURN,DRAGON_CLAW,31,15,15,12
 giratina_altered,SHADOW_CLAW,SHADOW_SNEAK,DRAGON_CLAW,25.5,15,15,15
 
-https://pvpoke.com/team-builder/all/2500/typhlosion-36-0-13-7-4-4-1-m-1-4-1%2Clapras-38-11-15-13-4-4-1-m-1-7-4%2Ccresselia-33-11-15-12-4-4-1-m-1-4-3
+https://pvpoke.com/team-builder/all/2500/typhlosion-36-0-13-7-4-4-1-m-1-4-1%2Clapras-m-1-7-4%2Cmewtwo_armored-28-10-15-11-4-4-1-m-0-4-1%2Ccresselia-33-11-15-12-4-4-1-m-1-4-3
 typhlosion,SHADOW_CLAW,SOLAR_BEAM,BLAST_BURN,36,0,13,7
-lapras,ICE_SHARD,SURF,ICE_BEAM,38,11,15,13
+lapras,ICE_SHARD,SURF,ICE_BEAM
+mewtwo_armored,CONFUSION,PSYSTRIKE,DYNAMIC_PUNCH,28,10,15,11
 cresselia,PSYCHO_CUT,MOONBLAST,GRASS_KNOT,33,11,15,12
 
 Threats:
