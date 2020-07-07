@@ -9,8 +9,8 @@ import java.util.stream.Stream;
 
 public class App {
 
-//    private static final String SEARCH_STRING = "giratina_altered:34,cresselia:25,swampert:17,registeel:16,empoleon:16,melmetal:15,escavalier:13,obstagoon:11";
-    private static final String SEARCH_STRING = "giratina_altered:53,cresselia:46,swampert:51,registeel:46,togekiss:34,charizard:24,escavalier:12,obstagoon:12,clefable:20,gyarados:18,snorlax:17,lapras:14\n";
+//    private static final String SEARCH_STRING = "giratina_altered:92,cresselia:89,swampert:57,registeel:55,escavalier:39";
+    private static final String SEARCH_STRING = "giratina_altered:170,swampert:194,cresselia:125,registeel:138,togekiss:80,charizard:62,escavalier:40,obstagoon:38,snorlax:53,muk_alolan:51,gyarados:35,clefable:43\n";
 
     private static final String DEFAULT_LEAGUE = "Ultra";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
