@@ -9,10 +9,13 @@ import java.util.stream.Stream;
 
 public class App {
 
-//    private static final String SEARCH_STRING = "giratina_altered:92,cresselia:89,swampert:57,registeel:55,escavalier:39";
-    private static final String SEARCH_STRING = "giratina_altered:170,swampert:194,cresselia:125,registeel:138,togekiss:80,charizard:62,escavalier:40,obstagoon:38,snorlax:53,muk_alolan:51,gyarados:35,clefable:43\n";
+    private static final String LEADS = "dialga:12,togekiss:11,melmetal:10\n";
+    private static final String BACKS = "dialga:35,togekiss:11,kyogre:12,giratina_origin:15,groudon:13,mewtwo:9\n";
 
-    private static final String DEFAULT_LEAGUE = "Ultra";
+    private static final String SEARCH_STRING = LEADS;
+
+
+    private static final String DEFAULT_LEAGUE = "Master";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
     private static final String NUMBER_OF_RESULTS = "50";
 
