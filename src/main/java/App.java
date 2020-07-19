@@ -9,14 +9,14 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "melmetal:69,dialga:68,giratina_origin:53,kyogre:43,groudon:41,togekiss:35\n";
-    private static final String BACKS = "dialga:233,melmetal:75,giratina_origin:56,togekiss:66,groudon:55,kyogre:49,mewtwo:48,zekrom:23,dragonite:19\n";
+    private static final String LEADS = "dialga:78,melmetal:75,giratina_origin:55,kyogre:44,groudon:42,togekiss:36\n";
+    private static final String BACKS = "dialga:246,melmetal:77,giratina_origin:60,togekiss:72,kyogre:60,groudon:60,mewtwo:51,zekrom:31,dragonite:21\n";
 
-    private static final String SEARCH_STRING = LEADS;
+    private static final String SEARCH_STRING = BACKS;
 
 
     private static final String DEFAULT_LEAGUE = "Master";
-    private static final String DEFAULT_NUMBER_OF_SHIELDS = "0";
+    private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
     private static final String NUMBER_OF_RESULTS = "25";
 
     public static void main(String[] args) throws IOException, InterruptedException {
