@@ -9,13 +9,13 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "dialga:95,melmetal:88,giratina_origin:66,groudon:54,kyogre:53,togekiss:45\n";
-    private static final String BACKS = "dialga:295,melmetal:94,giratina_origin:68,togekiss:87,kyogre:77,groudon:70,mewtwo:68,zekrom:37,dragonite:25,rhyperior:22\n";
+    private static final String LEADS = "skarmory:12,stunfisk_galarian:6,hypno:4,abomasnow:4\n";
+    private static final String BACKS = "azumarill:24,skarmory:14,stunfisk_galarian:14,hypno:6,meganium:7,deoxys_defense:6,marowak_alolan:5,bastiodon:5,umbreon:5\n";
 
-    private static final String SEARCH_STRING = BACKS;
+    private static final String SEARCH_STRING = LEADS;
 
 
-    private static final String DEFAULT_LEAGUE = "Master";
+    private static final String DEFAULT_LEAGUE = "Great";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
     private static final String NUMBER_OF_RESULTS = "25";
 
