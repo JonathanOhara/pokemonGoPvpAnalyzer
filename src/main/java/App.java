@@ -9,15 +9,15 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "skarmory:12,stunfisk_galarian:6,hypno:4,abomasnow:4\n";
-    private static final String BACKS = "azumarill:24,skarmory:14,stunfisk_galarian:14,hypno:6,meganium:7,deoxys_defense:6,marowak_alolan:5,bastiodon:5,umbreon:5\n";
+    private static final String LEADS = "skarmory:18,stunfisk_galarian:14,azumarill:12,abomasnow:10,hypno:8,marowak_alolan:6\n";
+    private static final String BACKS = "azumarill:60,skarmory:27,stunfisk_galarian:25,hypno:13,deoxys_defense:15,meganium:12,bastiodon:9\n";
 
-    private static final String SEARCH_STRING = LEADS;
+    private static final String SEARCH_STRING = BACKS;
 
 
     private static final String DEFAULT_LEAGUE = "Great";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
-    private static final String NUMBER_OF_RESULTS = "25";
+    private static final String NUMBER_OF_RESULTS = "50";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         args = resolveArgs(args);
