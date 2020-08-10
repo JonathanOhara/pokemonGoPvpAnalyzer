@@ -8,8 +8,11 @@ var leagueCp = $(".league-select").val();
 var finalString = "";
 
 $(".rank").each(function(){
-    finalString += $(this).attr("data") + "</br>"
+    if($(this).attr("data").indexOf("_shadow") == -1){
+        console.log(this);
+        finalString += $(this).attr("data") + "</br>"
+    }
 });
 
 var myWindow = window.open("", "Pokemons" + leagueNames[leagueCp] + "League" );
-myWindow.document.write(finalString);
+myWindow.document.write(finalString)

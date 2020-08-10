@@ -9,11 +9,10 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "azumarill:19,skarmory:10,stunfisk_galarian:9,hypno:6,bastiodon:6,shiftry:6,machamp:6\n";
-    private static final String BACKS = "azumarill:43,skarmory:18,hypno:15,stunfisk_galarian:11,deoxys_defense:15,shiftry:10,marowak_alolan:10,abomasnow:12,ferrothorn:12,obstagoon:7,registeel:7,meganium:10\n";
+    private static final String LEADS = "azumarill:20,stunfisk_galarian:15,skarmory:12,hypno:11,marowak_alolan:9,shiftry:8,bastiodon:8\n";
+    private static final String BACKS = "azumarill:60,skarmory:23,deoxys_defense:26,hypno:19,stunfisk_galarian:14,shiftry:14,marowak_alolan:11,meganium:16,bastiodon:8,abomasnow:12,registeel:10,altaria:8,umbreon:8,medicham:8\n";
 
     private static final String SEARCH_STRING = LEADS;
-
 
     private static final String DEFAULT_LEAGUE = "Great";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
