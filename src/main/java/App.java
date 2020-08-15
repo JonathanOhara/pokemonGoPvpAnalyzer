@@ -9,14 +9,14 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "azumarill:20,stunfisk_galarian:15,skarmory:12,hypno:11,marowak_alolan:9,shiftry:8,bastiodon:8\n";
-    private static final String BACKS = "azumarill:60,skarmory:23,deoxys_defense:26,hypno:19,stunfisk_galarian:14,shiftry:14,marowak_alolan:11,meganium:16,bastiodon:8,abomasnow:12,registeel:10,altaria:8,umbreon:8,medicham:8\n";
+    private static final String LEADS = "giratina_altered:17,cresselia:17,melmetal:12,articuno:10,escavalier:8,obstagoon:7,poliwrath:6\n";
+    private static final String BACKS = "giratina_altered:36,swampert:25,cresselia:10,registeel:24,togekiss:16,escavalier:12,lapras:12,gyarados:16,obstagoon:9,muk_alolan:9,snorlax:9\n";
 
-    private static final String SEARCH_STRING = LEADS;
+    private static final String SEARCH_STRING = BACKS;
 
-    private static final String DEFAULT_LEAGUE = "Great";
+    private static final String DEFAULT_LEAGUE = "Ultra";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
-    private static final String NUMBER_OF_RESULTS = "50";
+    private static final String NUMBER_OF_RESULTS = "25";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         args = resolveArgs(args);
@@ -35,11 +35,50 @@ public class App {
 
         PokemonGoPvpBattleAnalyzer pokemonGoPvpAnalyzer = new PokemonGoPvpBattleAnalyzer(league);
 
-        pokemonGoPvpAnalyzer.printBestCounter(
-                pokemonInLeagueList,
-                Integer.parseInt(args[2]),
-                Integer.parseInt(args[3])
-        );
+        List<PokemonGoPvpBattleAnalyzer.Score> scores;
+        if(args[2].toUpperCase() == "X"){
+            scores = joinScores(
+                    pokemonGoPvpAnalyzer.getBestCounters(pokemonInLeagueList, 0),
+                    pokemonGoPvpAnalyzer.getBestCounters(pokemonInLeagueList, 1),
+                    pokemonGoPvpAnalyzer.getBestCounters(pokemonInLeagueList, 2));
+            scores = pokemonGoPvpAnalyzer.orderScore(scores);
+        }else {
+            scores = pokemonGoPvpAnalyzer.getBestCounters(
+                    pokemonInLeagueList,
+                    Integer.parseInt(args[2]));
+        }
+
+        pokemonGoPvpAnalyzer.printScore(scores, Integer.parseInt(args[3]));
+    }
+
+    private static List<PokemonGoPvpBattleAnalyzer.Score> joinScores(List<PokemonGoPvpBattleAnalyzer.Score> scores0, List<PokemonGoPvpBattleAnalyzer.Score> scores1, List<PokemonGoPvpBattleAnalyzer.Score> scores2) {
+
+        for (PokemonGoPvpBattleAnalyzer.Score score : scores0) {
+
+            scores1.stream()
+                    .filter(otherScore -> otherScore.getPokemonName().equals(score.getPokemonName()))
+                    .findFirst()
+                    .ifPresentOrElse(
+                            otherScore -> {
+                                score.join(otherScore.getResults());
+                            }
+                            ,
+                            () -> {throw new RuntimeException("Score1 not Found!");}
+                    );
+
+            scores2.stream()
+                    .filter(otherScore -> otherScore.getPokemonName().equals(score.getPokemonName()))
+                    .findFirst()
+                    .ifPresentOrElse(
+                            otherScore -> {
+                                score.join(otherScore.getResults());
+                            }
+                            ,
+                            () -> {throw new RuntimeException("Score1 not Found!");}
+                    );
+        }
+
+        return scores0;
     }
 
     private static String[] resolveArgs(String[] args) {

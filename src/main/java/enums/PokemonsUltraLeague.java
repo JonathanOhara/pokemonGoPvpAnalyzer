@@ -4,7 +4,7 @@ public enum PokemonsUltraLeague implements PokemonInLeague {
 
     //Auto Generated
 
-    CRESSELIA("Cresselia","https://pvpoke.com/battle/multi/2500/all/cresselia/{shields}/1-2-4/2-1/206/0/"),
+    CRESSELIA("Cresselia","https://pvpoke.com/battle/multi/2500/all/cresselia/{shields}/1-3-4/2-1/206/0/"),
     GIRATINA_ALTERED("Giratina (Altered)","https://pvpoke.com/battle/multi/2500/all/giratina_altered/{shields}/1-2-3/2-1/205/0/"),
     SWAMPERT_SHADOW("Swampert (Shadow)","https://pvpoke.com/battle/multi/2500/all/swampert_shadow/{shields}/0-3-1/2-1/177/0/"),
     REGISTEEL("Registeel","https://pvpoke.com/battle/multi/2500/all/registeel/{shields}/0-2-1/2-1/162/0/"),

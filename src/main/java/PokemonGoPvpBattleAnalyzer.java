@@ -43,7 +43,7 @@ public class PokemonGoPvpBattleAnalyzer {
 		this.league = league;
     }
 
-    public void printBestCounter(List<PokemonWithWeight> pokemonList, int numberOfShields, int numberOfResults) throws IOException, InterruptedException {
+    public List<Score> getBestCounters(List<PokemonWithWeight> pokemonList, int numberOfShields) throws IOException, InterruptedException {
 
        	Set<Score> inputPokemonScore = new HashSet<>();
 
@@ -68,7 +68,12 @@ public class PokemonGoPvpBattleAnalyzer {
 			}
 		}
 
-		List<Score> orderedScore = new ArrayList<>(inputPokemonScore);
+		List<Score> orderedScore = orderScore(new ArrayList<>(inputPokemonScore));
+
+		return orderedScore;
+    }
+
+	public List<Score> orderScore(List<Score> orderedScore) {
 
 		if( IGNORE_WEIGHT ){
 			Collections.sort(orderedScore, Comparator.comparingInt(Score::sum));
@@ -79,7 +84,10 @@ public class PokemonGoPvpBattleAnalyzer {
 		if( !SHOW_SHADOW_POKEMON ){
 			orderedScore = orderedScore.stream().filter(score -> !score.getPokemonName().contains("_shadow")).collect(Collectors.toList());
 		}
+		return orderedScore;
+	}
 
+	public void printScore(List<Score> orderedScore, int numberOfResults) {
 		System.out.println("");
 
 		for(int i = 0; i < numberOfResults; i++){
@@ -116,7 +124,7 @@ public class PokemonGoPvpBattleAnalyzer {
 
 			System.out.println(output.toString());
 		}
-    }
+	}
 
 	private int getMatchupScoreValue(Map.Entry<String, String> pokemonScore) {
 		int value = Integer.parseInt(pokemonScore.getValue());
@@ -281,8 +289,25 @@ public class PokemonGoPvpBattleAnalyzer {
 		}
 
 		public void add(String pokemonName, int battleScore){
-    		results.add(new BattleResult(pokemonName, battleScore));
+			results.add(new BattleResult(pokemonName, battleScore));
 			Collections.sort(results, Comparator.comparingInt(BattleResult::getBattleScore));
+
+		}
+
+		public void join(List<BattleResult> otherResults) {
+			results.forEach(currentResult -> {
+				otherResults.stream()
+						.filter(r -> r.getPokemonName().equals(currentResult.getPokemonName()))
+						.findFirst()
+						.ifPresentOrElse(
+								otherResult -> {
+									currentResult.addBattleScore(otherResult.getBattleScore());
+								},
+								() -> {
+									throw new RuntimeException("Battle not found");
+								}
+						);
+			});
 		}
 
 		public List<BattleResult> getResults() {
@@ -305,6 +330,10 @@ public class PokemonGoPvpBattleAnalyzer {
 			return pokemonName;
 		}
 
+		public int getWeight() {
+			return weight;
+		}
+
 		class BattleResult{
     		private String pokemonName;
     		private int battleScore;
@@ -321,6 +350,10 @@ public class PokemonGoPvpBattleAnalyzer {
 
 			public int getBattleScore() {
 				return battleScore;
+			}
+
+			public void addBattleScore(int score){
+				this.battleScore += score;
 			}
 
 		}
