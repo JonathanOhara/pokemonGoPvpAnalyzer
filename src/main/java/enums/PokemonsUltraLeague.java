@@ -15,7 +15,7 @@ public enum PokemonsUltraLeague implements PokemonInLeague {
     ABOMASNOW_SHADOW("Abomasnow (Shadow)","https://pvpoke.com/battle/multi/2500/all/abomasnow_shadow/{shields}/0-5-2/2-1/175/0/"),
     SWAMPERT("Swampert","https://pvpoke.com/battle/multi/2500/all/swampert/{shields}/0-2-1/2-1/177/0/"),
     SUICUNE("Suicune","https://pvpoke.com/battle/multi/2500/all/suicune/{shields}/18-1-3/2-1/176/0/"),
-    MUK_ALOLAN("Muk (Alolan)","https://pvpoke.com/battle/multi/2500/all/muk_alolan/{shields}/2-2-3/2-1/189/0/"),
+    MUK_ALOLAN("Muk (Alolan)","https://pvpoke.com/battle/multi/2500/all/muk_alolan/{shields}/2-2-4/2-1/189/0/"),
     REGICE("Regice","https://pvpoke.com/battle/multi/2500/all/regice/{shields}/1-1-2/2-1/144/0/"),
     GYARADOS_SHADOW("Gyarados (Shadow)","https://pvpoke.com/battle/multi/2500/all/gyarados_shadow/{shields}/1-1-2/2-1/159/0/"),
     ESCAVALIER("Escavalier","https://pvpoke.com/battle/multi/2500/all/escavalier/{shields}/1-4-3/2-1/140/0/"),
