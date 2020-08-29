@@ -308,6 +308,7 @@ public class PokemonGoPvpBattleAnalyzer {
 								}
 						);
 			});
+			Collections.sort(results, Comparator.comparingInt(BattleResult::getBattleScore));
 		}
 
 		public List<BattleResult> getResults() {

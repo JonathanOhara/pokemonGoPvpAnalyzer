@@ -9,11 +9,11 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "dialga:119,melmetal:96,giratina_origin:83,groudon:61,kyogre:59,togekiss:51,mewtwo:28\n";
-    private static final String BACKS = "dialga:333,melmetal:113,giratina_origin:76,togekiss:98,kyogre:88,groudon:82,mewtwo:84,zekrom:43,rhyperior:34,dragonite:27,giratina_altered:20,metagross:19,snorlax:18,palkia:17\n";
+    private static final String LEADS = "dialga:36,giratina_origin:26,groudon:22,melmetal:18,togekiss:14,kyogre:12\n";
+    private static final String BACKS = "dialga:69,melmetal:38,groudon:29,giratina_origin:23,kyogre:26,mewtwo:32,togekiss:17,dragonite:9,rhyperior:10,zekrom:10\n";
     private static final String OTHER = "";
 
-    private static final String SEARCH_STRING = LEADS;
+    private static final String SEARCH_STRING = BACKS;
 
     private static final String DEFAULT_LEAGUE = "Master";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
