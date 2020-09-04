@@ -1,0 +1,43 @@
+Compilei uns dados interessates
+
+Sobre Lead *Dialga*:
+- A chance de ter um togekiss é quase nula (1/50)
+- Nos últimos 2 dias Enfrentei 14 vezes Dialga, 10 vezes tinha Mewtwo (usado geralmente como safe switch)
+
+Sobre Lead *Giratina_origin*:
+- A chance de NÃO ter um metal no back é quase nula (1/38). Metais mais comuns: Dialga depois Melmetal
+- Dialga e Melmetal é o time mais comum para esse lead
+- Vem aumentando muito o número de Giratina como lead. Nas minhas últimas 100 partidas, 23 eram Giratina_origin
+
+Sobre Lead *Groudon*:
+- Grande chance de ter um Dialga (3/4)
+- A chance de ter um togekiss ou Giratina são bem baixas
+
+Sobre Lead *Melmetal*:
+- 90% de chance de ter um Dialga
+- Na última semana o time mais comum vem sendo: Melmetal, Dialga e Dragonite
+
+Sobre Lead *Togekiss*:
+- 50% de ter um Groudon
+
+Sobre Lead *Togekiss*:
+- Enfrentei 12 Mewtwo nas últimas 100 partidas, antes disso nunca tinha enfrentado.
+- 80% de ter um Dialga
+
+Sobre Lead *Kyogre*:
+- Enfrentei 1 Kyogre nos últimos 2 dias. Vem caindo bastante o uso como lead.
+- 90% de chance de ter um Dialga
+- Dialga e togekiss é o time mais comum para esse lead
+
+
+rhyperior,MUD_SLAP,ROCK_WRECKER,SURF,40,15,15,14
+kyogre,WATERFALL,SURF,THUNDER,40,14,15,14
+dialga,DRAGON_BREATH,IRON_HEAD,DRACO_METEOR,40,15,15,10
+
+dialga,DRAGON_BREATH,IRON_HEAD,DRACO_METEOR
+mewtwo,PSYCHO_CUT,PSYSTRIKE,FOCUS_BLAST
+groudon,MUD_SHOT,EARTHQUAKE,FIRE_PUNCH
+
+giratina_origin,SHADOW_CLAW,SHADOW_BALL,OMINOUS_WIND
+dialga,DRAGON_BREATH,IRON_HEAD,DRACO_METEOR
+melmetal,THUNDER_SHOCK,SUPER_POWER,ROCK_SLIDE

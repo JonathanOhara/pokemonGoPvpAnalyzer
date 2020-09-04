@@ -247,7 +247,7 @@ public class PokemonGoPvpBattleAnalyzer {
 		if(DISABLE_BAIT_SHIELDS){
 			System.out.print("Disabling Shield baiting...");
 			//expand form
-			driver.findElement(By.cssSelector("div.poke:nth-child(1) > div:nth-child(5) > div:nth-child(11) > a:nth-child(3)")).click();
+			driver.findElement(By.cssSelector("div.poke:nth-child(1) > div:nth-child(5) > div:nth-child(12) > a:nth-child(3)")).click();
 
 			//disable button 1
 			driver.findElement(By.cssSelector("#main > div.section.poke-select-container.multi > div:nth-child(1) > div.poke-stats > div.options > div.toggle-content > div.check.shield-baiting > span")).click();
