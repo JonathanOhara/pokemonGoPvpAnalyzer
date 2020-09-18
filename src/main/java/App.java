@@ -9,14 +9,14 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "giratina_origin:109,dialga:106,melmetal:74,groudon:73,togekiss:48,mewtwo:34,kyogre:25\n";
-    private static final String BACKS = "dialga:344,melmetal:214,groudon:203,giratina_origin:191,mewtwo:177,togekiss:99,kyogre:93,dragonite:49,giratina_altered:36,rhyperior:36\n";
+    private static final String LEADS = "azumarill:11,stunfisk_galarian:11,bastiodon:9,obstagoon:6,marowak_alolan:5,umbreon:5,galvantula:5,toxicroak:5,swampert:5,drifblim:4\n";
+    private static final String BACKS = "azumarill:35,stunfisk_galarian:13,skarmory:17,marowak_alolan:10,umbreon:5,deoxys_defense:8,abomasnow:6,shiftry:6,altaria:7,victreebel:6,registeel:7,machamp:8,tropius:5\n";
 //    private static final String OTHER = "dialga,kyogre";
 
     private static final String SEARCH_STRING = LEADS;
 
-    private static final String DEFAULT_LEAGUE = "Master";
-    private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
+    private static final String DEFAULT_LEAGUE = "Great";
+    private static final String DEFAULT_NUMBER_OF_SHIELDS = "X";
     private static final String NUMBER_OF_RESULTS = "50";
 
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -41,7 +41,8 @@ public class App {
             scores = joinScores(
                     pokemonGoPvpAnalyzer.getBestCounters(pokemonInLeagueList, 0),
                     pokemonGoPvpAnalyzer.getBestCounters(pokemonInLeagueList, 1),
-                    pokemonGoPvpAnalyzer.getBestCounters(pokemonInLeagueList, 2));
+                    pokemonGoPvpAnalyzer.getBestCounters(pokemonInLeagueList, 2)
+            );
             scores = pokemonGoPvpAnalyzer.orderScore(scores);
         }else {
             scores = pokemonGoPvpAnalyzer.getBestCounters(
