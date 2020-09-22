@@ -9,14 +9,14 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "azumarill:11,stunfisk_galarian:11,bastiodon:9,obstagoon:6,marowak_alolan:5,umbreon:5,galvantula:5,toxicroak:5,swampert:5,drifblim:4\n";
-    private static final String BACKS = "azumarill:35,stunfisk_galarian:13,skarmory:17,marowak_alolan:10,umbreon:5,deoxys_defense:8,abomasnow:6,shiftry:6,altaria:7,victreebel:6,registeel:7,machamp:8,tropius:5\n";
-//    private static final String OTHER = "dialga,kyogre";
+    private static final String LEADS = "azumarill:23,stunfisk_galarian:20,bastiodon:17,swampert:15,galvantula:12,marowak_alolan:9,altaria:9,toxicroak:8,obstagoon:8\n";
+    private static final String BACKS = "azumarill:65,stunfisk_galarian:40,skarmory:29,marowak_alolan:21,bastiodon:10,galvantula:12,deoxys_defense:18,machamp:13,abomasnow:12,altaria:9,victreebel:12,shiftry:11,meganium:12,hypno:9,tropius:9\n";
+//    private static final String OTHER = "";
 
     private static final String SEARCH_STRING = LEADS;
 
     private static final String DEFAULT_LEAGUE = "Great";
-    private static final String DEFAULT_NUMBER_OF_SHIELDS = "X";
+    private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
     private static final String NUMBER_OF_RESULTS = "50";
 
     public static void main(String[] args) throws IOException, InterruptedException {
