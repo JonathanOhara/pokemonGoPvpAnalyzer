@@ -9,8 +9,8 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "azumarill:31,stunfisk_galarian:28,altaria:28,swampert:25,abomasnow:18,bastiodon:18,galvantula:16,marowak_alolan:15\n";
-    private static final String BACKS = "azumarill:110,stunfisk_galarian:64,skarmory:47,marowak_alolan:32,altaria:16,deoxys_defense:36,galvantula:17,,machamp:19,toxicroak:16,hypno:19,meganium:17,sableye:19\n";
+    private static final String LEADS = "azumarill:36,stunfisk_galarian:28,altaria:28,swampert:25,abomasnow:23,bastiodon:21,marowak_alolan:17,galvantula:16,toxicroak:11,obstagoon:11,machamp:10\n";
+    private static final String BACKS = "azumarill:114,stunfisk_galarian:67,skarmory:52,marowak_alolan:36,altaria:17,deoxys_defense:37,abomasnow:15,bastiodon:13,galvantula:17,toxicroak:18,machamp:19,hypno:20,victreebel:16,shiftry:17,sableye:23,meganium:17,scrafty:14,medicham:17,tropius:12,registeel:12\n";
 //    private static final String OTHER = "";
 
     private static final String SEARCH_STRING = BACKS;
