@@ -13,7 +13,7 @@ public class App {
     private static final String BACKS = "azumarill:114,stunfisk_galarian:67,skarmory:52,marowak_alolan:36,altaria:17,deoxys_defense:37,abomasnow:15,bastiodon:13,galvantula:17,toxicroak:18,machamp:19,hypno:20,victreebel:16,shiftry:17,sableye:23,meganium:17,scrafty:14,medicham:17,tropius:12,registeel:12\n";
 //    private static final String OTHER = "";
 
-    private static final String SEARCH_STRING = BACKS;
+    private static final String SEARCH_STRING = LEADS;
 
     private static final String DEFAULT_LEAGUE = "Great";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
