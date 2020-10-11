@@ -9,13 +9,13 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "azumarill:36,stunfisk_galarian:28,altaria:28,swampert:25,abomasnow:23,bastiodon:21,marowak_alolan:17,galvantula:16,toxicroak:11,obstagoon:11,machamp:10\n";
-    private static final String BACKS = "azumarill:114,stunfisk_galarian:67,skarmory:52,marowak_alolan:36,altaria:17,deoxys_defense:37,abomasnow:15,bastiodon:13,galvantula:17,toxicroak:18,machamp:19,hypno:20,victreebel:16,shiftry:17,sableye:23,meganium:17,scrafty:14,medicham:17,tropius:12,registeel:12\n";
-//    private static final String OTHER = "";
+    private static final String LEADS = "dragonite:27,ampharos:24,togekiss:19,gallade:19,magnezone:18,charizard:16,venusaur:16,toxicroak:16,escavalier:16,empoleon:15,gengar:14,lapras:13,obstagoon:13,machamp:12,swampert:11,abomasnow:11";
+    private static final String BACKS = "gallade:32,lapras:28,charizard:21,empoleon:14,snorlax:20,venusaur:17,escavalier:11,dragonite:11,swampert:17,ampharos:10,toxicroak:9,machamp:11,muk_alolan:15,kingdra:13,togekiss:9,clefable:8,tangrowth:6,gyarados:7,drifblim:6,crustle:5\n";
+    private static final String OTHER = "charizard,muk_alolan,lapras,escavalier";
 
-    private static final String SEARCH_STRING = LEADS;
+    private static final String SEARCH_STRING = BACKS;
 
-    private static final String DEFAULT_LEAGUE = "Great";
+    private static final String DEFAULT_LEAGUE = "UltraPremier";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
     private static final String NUMBER_OF_RESULTS = "50";
 
@@ -102,7 +102,7 @@ public class App {
         String firstParam = args[0];
         if(firstParam.equals("help") || firstParam.equals("-h") || firstParam.equals("--help")) {
             System.out.println("Params: ");
-            System.out.println("PVP League.          Possible Values: Great, Ultra, Master ");
+            System.out.println("PVP League.          Possible Values: Great, Ultra, UltraPremier, Master, MasterPremier ");
             System.out.println("Leads.               Possible Values: Altaria, Swampert, Giratina (Altered).... ");
             System.out.println("Number of Shields.   Possible Values: 0....2 ");
             System.out.println("Number of Results.   Possible Values: 0....250 ");

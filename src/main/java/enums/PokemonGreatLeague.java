@@ -1,6 +1,6 @@
 package enums;
 
-public enum PokemonsGreatLeague implements PokemonInLeague {
+public enum PokemonGreatLeague implements PokemonInLeague {
 
     //Auto Generated
     AZUMARILL("Azumarill","https://pvpoke.com/battle/multi/1500/all/azumarill/{shields}/0-2-1/2-1/184/0/"),
@@ -585,7 +585,7 @@ public enum PokemonsGreatLeague implements PokemonInLeague {
     private String name;
     private String url;
 
-    PokemonsGreatLeague(String name, String url) {
+    PokemonGreatLeague(String name, String url) {
         this.name = name;
         this.url = url;
     }

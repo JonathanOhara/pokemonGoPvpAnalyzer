@@ -5,9 +5,12 @@ import java.util.List;
 import java.util.function.Supplier;
 
 public enum League {
-    GREAT(1500, PokemonsGreatLeague::values),
-    ULTRA(2500, PokemonsUltraLeague::values),
-    MASTER(10000, PokemonsMasterLeague::values);
+    GREAT(1500, PokemonGreatLeague::values),
+    ULTRA(2500, PokemonUltraLeague::values),
+    ULTRAPREMIER(2500, PokemonUltraPremierLeague::values),
+    MASTER(10000, PokemonMasterLeague::values)
+//    MASTERPREMIERE(10000, PokemonUltraLeague::values)
+    ;
 
     private List<PokemonInLeague> availablePokemon;
     private int maxCp;

@@ -1,0 +1,26 @@
+Pokémon,FAST_MOVE:ENERGY,CHARGE_MOVE:COST,CHARGE_MOVE:COST
+
+abomasnow   POWDER_SNOW    WEATHER_BALL:5*   ENERGY_BALL:7
+ampharos    VOLT_SWITCH    THUNDER_PUNCH:4*  FOCUS_BLAST:5
+clefable    CHARM          METEOR_MASH:9*    PSYCHIC:10*      MOONBLAST:10
+charizard   FIRE_SPIN      DRAGON_CLAW:4*    BLAST_BURN:5
+dragonite   DRAGON_BREATH  DRAGON_CLAW:12    HURRICANE:17
+drifblim    HEX            ICY_WIND:4        SHADOW_BALL:5
+escavalier  COUNTER        DRILL_RUN:7*      AERIAL_ACE:7*    MEGAHORN:8
+empoleon    WATERFALL      HYDRO_CANNON:5    DRILL_PECK:5
+exeggutor   CONFUSION      SEED_BOMB:5*      PSYCHIC:7*
+gallade     CONFUSION      LEAF_BLADE:3      CLOSE_COMBAT:4
+gengar      SHADOW_CLAW    SHADOW_PUNCH:5*   SHADOW_BALL:7
+gyarados    DRAGON_BREATH  AQUA_TAIL:12      CRUNCH:15
+kingdra     DRAGON_BREATH  OCTAZOOKA:17      OUTRAGE:20
+lapras      ICE_SHARD      SURF:4            ICE_BEAM:6*      SKULL_BASH:8*
+machamp     COUNTER        CROSS_CHOP:5      ROCK_SLIDE:7*
+magnezone   SPARK          MIRROR_SHOT:5*    WILD_CHARGE:6
+muk_alolan  SNARL          DARK_PULSE:4      SLUDGE_WAVE:6
+obstagoon   COUNTER        NIGHT_SLASH:5     CROSS_CHOP:5     GUNK_SHOT:11
+snorlax     LICK           BODY_SLAM:12      SUPER_POWER:14*  EARTHQUAKE:22
+swampert    MUD_SHOT       HYDRO_CANNON:5*   SLUDGE_WAVE:8*   EARTHQUAKE:8*
+tangrowth   VINE_WHIP      ROCK_SLIDE:6      POWER_WHIP:7*
+togekiss    CHARM          ANCIENT_POWER:8*  AERIAL_ACE:8*    FLAMETHROWER:10*
+toxicroak   COUNTER        MUD_BOMB:6        SLUDGE_BOMB:8*
+venusaur    VINE_WHIP      FRENZY_PLANT:6    SLUDGE_BOMB:7*

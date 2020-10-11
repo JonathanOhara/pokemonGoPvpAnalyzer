@@ -1,6 +1,6 @@
 package enums;
 
-public enum PokemonsUltraLeague implements PokemonInLeague {
+public enum PokemonUltraLeague implements PokemonInLeague {
 
     //Auto Generated
     CRESSELIA("Cresselia","https://pvpoke.com/battle/multi/2500/all/cresselia/{shields}/1-2-4/2-1/206/0/"),
@@ -369,7 +369,7 @@ public enum PokemonsUltraLeague implements PokemonInLeague {
     private String name;
     private String url;
 
-    PokemonsUltraLeague(String name, String url) {
+    PokemonUltraLeague(String name, String url) {
         this.name = name;
         this.url = url;
     }

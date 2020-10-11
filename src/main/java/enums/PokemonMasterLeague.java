@@ -1,6 +1,6 @@
 package enums;
 
-public enum PokemonsMasterLeague  implements PokemonInLeague {
+public enum PokemonMasterLeague implements PokemonInLeague {
 
     //Auto Generated
     GROUDON("Groudon","https://pvpoke.com/battle/multi/10000/all/groudon/{shields}/1-1-3/2-1/173/0/"),
@@ -279,7 +279,7 @@ public enum PokemonsMasterLeague  implements PokemonInLeague {
     private String name;
     private String url;
 
-    PokemonsMasterLeague(String name, String url) {
+    PokemonMasterLeague(String name, String url) {
         this.name = name;
         this.url = url;
     }

@@ -273,10 +273,9 @@ public class PokemonGoPvpBattleAnalyzer {
 			}
 		}
 
-		driver.close();
+		driver.quit();
 		return pokemonScore;
 	}
-
 
 	class Score{
     	private String pokemonName;
