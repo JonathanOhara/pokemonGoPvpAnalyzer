@@ -9,14 +9,14 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "dragonite:27,ampharos:24,togekiss:19,gallade:19,magnezone:18,charizard:16,venusaur:16,toxicroak:16,escavalier:16,empoleon:15,gengar:14,lapras:13,obstagoon:13,machamp:12,swampert:11,abomasnow:11";
-    private static final String BACKS = "gallade:32,lapras:28,charizard:21,empoleon:14,snorlax:20,venusaur:17,escavalier:11,dragonite:11,swampert:17,ampharos:10,toxicroak:9,machamp:11,muk_alolan:15,kingdra:13,togekiss:9,clefable:8,tangrowth:6,gyarados:7,drifblim:6,crustle:5\n";
-    private static final String OTHER = "charizard,muk_alolan,lapras,escavalier";
+    private static final String LEADS = "giratina_origin:21,dialga:19,melmetal:15,togekiss:11,groudon:10,kyogre:8\n";
+    private static final String BACKS = "dialga:55,melmetal:25,giratina_origin:17,mewtwo:28,groudon:17,togekiss:9,kyogre:11,rhyperior:9,dragonite:7,snorlax:5,giratina_altered:5\n";
+    private static final String OTHER = "";
 
-    private static final String SEARCH_STRING = BACKS;
+    private static final String SEARCH_STRING = LEADS;
 
-    private static final String DEFAULT_LEAGUE = "UltraPremier";
-    private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
+    private static final String DEFAULT_LEAGUE = "Master";
+    private static final String DEFAULT_NUMBER_OF_SHIELDS = "X";
     private static final String NUMBER_OF_RESULTS = "50";
 
     public static void main(String[] args) throws IOException, InterruptedException {
