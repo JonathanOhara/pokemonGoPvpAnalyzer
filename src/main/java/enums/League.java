@@ -6,6 +6,7 @@ import java.util.function.Supplier;
 
 public enum League {
     GREAT(1500, PokemonGreatLeague::values),
+    HALLOWEEN(2500, PokemonHalloweenLeague::values),
     ULTRA(2500, PokemonUltraLeague::values),
     ULTRAPREMIER(2500, PokemonUltraPremierLeague::values),
     MASTER(10000, PokemonMasterLeague::values)
