@@ -1,4 +1,4 @@
-package enums;
+package leagues;
 
 public enum PokemonUltraPremierLeague implements PokemonInLeague {
 

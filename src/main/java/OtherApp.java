@@ -1,10 +1,10 @@
-import enums.League;
+import leagues.League;
 
 import java.io.IOException;
 
 public class OtherApp {
 
-    private static final String DEFAULT_LEAGUE = "Ultra";
+    private static final String DEFAULT_LEAGUE = "Little";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         args = resolveArgs(args);

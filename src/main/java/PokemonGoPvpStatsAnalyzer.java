@@ -1,4 +1,4 @@
-import enums.League;
+import leagues.League;
 import model.PokemonOverallStat;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static enums.PokemonInLeague.hasPokemon;
+import static leagues.PokemonInLeague.hasPokemon;
 
 public class PokemonGoPvpStatsAnalyzer {
 

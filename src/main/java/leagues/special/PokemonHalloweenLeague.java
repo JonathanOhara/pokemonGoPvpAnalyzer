@@ -1,4 +1,6 @@
-package enums;
+package leagues.special;
+
+import leagues.PokemonInLeague;
 
 public enum PokemonHalloweenLeague implements PokemonInLeague {
 

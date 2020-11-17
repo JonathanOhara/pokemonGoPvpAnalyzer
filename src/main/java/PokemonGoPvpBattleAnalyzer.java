@@ -1,5 +1,5 @@
-import enums.League;
-import enums.PokemonInLeague;
+import leagues.League;
+import leagues.PokemonInLeague;
 import model.PokemonWithWeight;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -35,7 +35,7 @@ public class PokemonGoPvpBattleAnalyzer {
 	private final boolean IGNORE_WEIGHT 			= false;
 
 	private final boolean SHOW_SHADOW_POKEMON		= true;
-	private final boolean DISABLE_BAIT_SHIELDS		= true;
+	private final boolean DISABLE_BAIT_SHIELDS		= false;
 
 	private final League league;
 

@@ -1,6 +1,6 @@
 package model;
 
-import enums.PokemonInLeague;
+import leagues.PokemonInLeague;
 
 public class PokemonWithWeight {
     private PokemonInLeague pokemonInLeague;
