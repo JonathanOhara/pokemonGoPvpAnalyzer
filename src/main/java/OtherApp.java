@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class OtherApp {
 
-    private static final String DEFAULT_LEAGUE = "Little";
+    private static final String DEFAULT_LEAGUE = "Great";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         args = resolveArgs(args);

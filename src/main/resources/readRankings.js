@@ -8,7 +8,8 @@ var leagueCp = $(".league-select").val();
 var finalString = "";
 
 $(".rank").each(function(){
-    if($(this).attr("data").indexOf("_shadow") == -1){
+    var name = $(this).attr("data");
+    if(name.indexOf("_shadow") === -1 && name.indexOf("_xl") === -1){
         console.log(this);
         finalString += $(this).attr("data") + "</br>"
     }
