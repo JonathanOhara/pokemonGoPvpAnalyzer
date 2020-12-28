@@ -9,13 +9,15 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "azumarill:34,stunfisk_galarian:32,skarmory:18,altaria:16,galvantula:16,deoxys_defense:15,victreebel:14,bastiodon:14,abomasnow:14,marowak_alolan:14,swampert:12\n";
-    private static final String BACKS = "azumarill:132,stunfisk_galarian:66,skarmory:45,marowak_alolan:38,deoxys_defense:23,victreebel:18,sableye:29,altaria:14,bastiodon:15,abomasnow:13,toxicroak:18,hypno:22,tropius:15,umbreon:19,machamp:14,scrafty:15,shiftry:13,ferrothorn:15\n";
+    private static final String LEADS = "dragonite:28,obstagoon:23,toxicroak:22,swampert:22,empoleon:20,charizard:18,lapras:18,ampharos:17,gengar:15,tangrowth:14,magnezone:14,escavalier:14,machamp:14,drifblim:13,venusaur:11,abomasnow:11,togekiss:11\n";
+    private static final String BACKS = "charizard:61,swampert:41,lapras:45,gallade:51,venusaur:46,empoleon:36,dragonite:25,machamp:39,snorlax:41,toxicroak:22,escavalier:28,ampharos:22,togekiss:22,drifblim:17,gengar:14,tangrowth:15,clefable:23,kingdra:15,muk_alolan:22,gyarados:16\n";
+
     private static final String OTHER = "";
 
     private static final String SEARCH_STRING = LEADS;
 
-    private static final String DEFAULT_LEAGUE = "Great";
+//    private static final String DEFAULT_LEAGUE = "Ultra";
+private static final String DEFAULT_LEAGUE = "UltraPremier";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
     private static final String NUMBER_OF_RESULTS = "50";
 
