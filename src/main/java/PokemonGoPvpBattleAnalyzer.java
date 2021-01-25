@@ -244,6 +244,12 @@ public class PokemonGoPvpBattleAnalyzer {
 		}while(driver.findElements(By.cssSelector(".rankings-container > div")).size() == 0);
 		System.out.println();
 
+
+		WebElement acceptButton = driver.findElement(By.cssSelector("button.ncmp__btn:nth-child(2)"));
+		if(acceptButton != null) {
+			acceptButton.click();
+		}
+
 		if(DISABLE_BAIT_SHIELDS){
 			System.out.print("Disabling Shield baiting...");
 			//expand form
@@ -253,7 +259,7 @@ public class PokemonGoPvpBattleAnalyzer {
 			driver.findElement(By.cssSelector("#main > div.section.poke-select-container.multi > div:nth-child(1) > div.poke-stats > div.options > div.toggle-content > div.check.shield-baiting > span")).click();
 
 			//disable button 2
-			driver.findElement(By.cssSelector("#main > div.section.poke-select-container.multi > div:nth-child(3) > div > div.options > div > span")).click();
+			driver.findElement(By.cssSelector("div.poke-stats:nth-child(3) > div:nth-child(2) > div:nth-child(6) > span:nth-child(1)")).click();
 
 			//Re run battles
 			driver.findElement(By.cssSelector("#main > div.section.battle > button.battle-btn.button")).click();

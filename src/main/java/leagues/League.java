@@ -1,6 +1,7 @@
 package leagues;
 
 import leagues.special.PokemonHalloweenLeague;
+import leagues.special.PokemonHolidayLeague;
 import leagues.special.PokemonKantoLeague;
 import leagues.special.PokemonLittleLeague;
 
@@ -14,11 +15,12 @@ public enum League {
     ULTRA(2500, PokemonUltraLeague::values),
     ULTRAPREMIER(2500, PokemonUltraPremierLeague::values),
     MASTER(10000, PokemonMasterLeague::values),
-//    MASTERPREMIERE(10000, PokemonUltraLeague::values)
+//    MASTERPREMIER(10000, PokemonUltraLeague::values)
 
     //SPECIAL
-    HALLOWEEN(2500, PokemonHalloweenLeague::values),
-    KANTO(1500, PokemonKantoLeague::values)
+    HALLOWEEN(1500, PokemonHalloweenLeague::values),
+    KANTO(1500, PokemonKantoLeague::values),
+    HOLIDAY(1500, PokemonHolidayLeague::values)
     ;
 
     private List<PokemonInLeague> availablePokemon;

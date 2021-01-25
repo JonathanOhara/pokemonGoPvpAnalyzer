@@ -9,15 +9,14 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "dragonite:28,obstagoon:23,toxicroak:22,swampert:22,empoleon:20,charizard:18,lapras:18,ampharos:17,gengar:15,tangrowth:14,magnezone:14,escavalier:14,machamp:14,drifblim:13,venusaur:11,abomasnow:11,togekiss:11\n";
-    private static final String BACKS = "charizard:61,swampert:41,lapras:45,gallade:51,venusaur:46,empoleon:36,dragonite:25,machamp:39,snorlax:41,toxicroak:22,escavalier:28,ampharos:22,togekiss:22,drifblim:17,gengar:14,tangrowth:15,clefable:23,kingdra:15,muk_alolan:22,gyarados:16\n";
+    private static final String LEADS = "stunfisk_galarian:23,azumarill:20,altaria:18,mew:16,abomasnow:15,swampert:14,tropius:14,deoxys_defense:11,umbreon:10,politoed:10,skarmory:10,bastiodon:9,ninetales_alolan:9,toxicroak:9,pelipper:8,marowak_alolan:8,sirfetchd:8,scrafty:8,venusaur:8\n";
+    private static final String BACKS = "azumarill:28,stunfisk_galarian:21,skarmory:19,ninetales_alolan:13,pelipper:13,toxicroak:13,deoxys_defense:14,altaria:7,abomasnow:7,scrafty:7,marowak_alolan:9,sableye:13,politoed:5,bastiodon:6,hypno:6,tropius:6,meganium:9shiftry:5,venusaur:6,ferrothorn:6\n";
 
     private static final String OTHER = "";
 
     private static final String SEARCH_STRING = LEADS;
 
-//    private static final String DEFAULT_LEAGUE = "Ultra";
-private static final String DEFAULT_LEAGUE = "UltraPremier";
+    private static final String DEFAULT_LEAGUE = "Great";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
     private static final String NUMBER_OF_RESULTS = "50";
 
