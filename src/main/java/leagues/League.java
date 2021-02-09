@@ -19,6 +19,7 @@ public enum League {
 
     //SPECIAL
     HALLOWEEN(1500, PokemonHalloweenLeague::values),
+    LOVE(1500, PokemonHalloweenLeague::values),
     KANTO(1500, PokemonKantoLeague::values),
     HOLIDAY(1500, PokemonHolidayLeague::values)
     ;
