@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "";
+    private static final String LEADS = "alomomola:6,medicham:6,scolipede:6,clefable:5,scrafty:5,wormadam_trash:5,charizard:3,magcargo:3,slowbro:3,vileplume:2\n";
     private static final String BACKS = "";
 
     private static final String OTHER = "";

@@ -4,6 +4,7 @@ import leagues.special.PokemonHalloweenLeague;
 import leagues.special.PokemonHolidayLeague;
 import leagues.special.PokemonKantoLeague;
 import leagues.special.PokemonLittleLeague;
+import leagues.special.PokemonLoveLeague;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +20,7 @@ public enum League {
 
     //SPECIAL
     HALLOWEEN(1500, PokemonHalloweenLeague::values),
-    LOVE(1500, PokemonHalloweenLeague::values),
+    LOVE(1500, PokemonLoveLeague::values),
     KANTO(1500, PokemonKantoLeague::values),
     HOLIDAY(1500, PokemonHolidayLeague::values)
     ;

@@ -3,7 +3,6 @@ package leagues;
 public enum PokemonGreatLeague implements PokemonInLeague {
 
     //Auto Generated
-
     MEDICHAM_XL("Medicham (XL)","https://pvpoke.com/battle/multi/1500/all/medicham_xl/{shields}/0-2-4/2-1/141/0/"),
     AZUMARILL_XL("Azumarill (XL)","https://pvpoke.com/battle/multi/1500/all/azumarill_xl/{shields}/0-2-1/2-1/188/0/"),
     STUNFISK_GALARIAN("Stunfisk (Galarian)","https://pvpoke.com/battle/multi/1500/all/stunfisk_galarian/{shields}/1-4-1/2-1/167/0/"),
