@@ -9,14 +9,14 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "alomomola:6,medicham:6,scolipede:6,clefable:5,scrafty:5,wormadam_trash:5,charizard:3,magcargo:3,slowbro:3,vileplume:2\n";
-    private static final String BACKS = "";
+    private static final String LEADS = "stunfisk_galarian:33,azumarill:32,swampert:28,altaria:27,abomasnow:24,mew:23,tropius:20,skarmory:20,medicham:19,ninetales_alolan:19,marowak_alolan:16,hypno:16,umbreon:16,pelipper:15,bastiodon:15\n";
+    private static final String BACKS = "azumarill:97,stunfisk_galarian:89,skarmory:56,ninetales_alolan:41,sableye:48,bastiodon:38,medicham:32,umbreon:35,marowak_alolan:34,altaria:21,pelipper:33,swampert:18,deoxys_defense:32,toxicroak:30,abomasnow:19,hypno:24,mew:15,venusaur:23,tropius:15,scrafty:21,galvantula:17,meganium:20,machamp:15,registeel:15\n";
 
     private static final String OTHER = "";
 
     private static final String SEARCH_STRING = LEADS;
 
-    private static final String DEFAULT_LEAGUE = "Love";
+    private static final String DEFAULT_LEAGUE = "Great";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
     private static final String NUMBER_OF_RESULTS = "50";
 
