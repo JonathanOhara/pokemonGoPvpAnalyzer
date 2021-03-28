@@ -9,12 +9,12 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "toxicroak:16,machamp:16,swampert:14,dragonite:13,abomasnow:13,ampharos:9,talonflame:8,lapras:6,obstagoon:6,empoleon:6,umbreon:6,galvantula:6\n";
-    private static final String BACKS = "machamp:25,swampert:18,snorlax:25,kingdra:25,empoleon:20,abomasnow:12,lapras:18,talonflame:15,clefable:17,venusaur:19,umbreon:12,charizard:16,galvantula:8,gallade:12,togekiss:9\n";
+    private static final String LEADS = "machamp:30,swampert:25,toxicroak:25,dragonite:24,abomasnow:21,empoleon:14,galvantula:14,talonflame:12,umbreon:12,ampharos:12\n";
+    private static final String BACKS = "machamp:46,swampert:33,venusaur:46,empoleon:34,snorlax:41,lapras:37,kingdra:39,abomasnow:19,talonflame:25,charizard:27,clefable:30,umbreon:22,galvantula:15,ninetales_alolan:16,togekiss:20,gengar:13,gallade:16,stunfisk_galarian:15\n";
 
     private static final String OTHER = "machamp,toxicroak,clefable";
 
-    private static final String SEARCH_STRING = LEADS;
+    private static final String SEARCH_STRING = BACKS;
 
     private static final String DEFAULT_LEAGUE = "UltraPremier";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";

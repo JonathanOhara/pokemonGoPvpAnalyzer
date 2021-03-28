@@ -309,7 +309,7 @@ public class PokemonGoPvpBattleAnalyzer {
 									currentResult.addBattleScore(otherResult.getBattleScore());
 								},
 								() -> {
-									throw new RuntimeException("Battle not found");
+									throw new RuntimeException("Battle not found for "+currentResult.getPokemonName());
 								}
 						);
 			});
