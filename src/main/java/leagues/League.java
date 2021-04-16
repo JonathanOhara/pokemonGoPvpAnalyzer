@@ -1,10 +1,6 @@
 package leagues;
 
-import leagues.special.PokemonHalloweenLeague;
-import leagues.special.PokemonHolidayLeague;
-import leagues.special.PokemonKantoLeague;
-import leagues.special.PokemonLittleLeague;
-import leagues.special.PokemonLoveLeague;
+import leagues.special.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,6 +15,7 @@ public enum League {
 //    MASTERPREMIER(10000, PokemonUltraLeague::values)
 
     //SPECIAL
+    REMIX(1500, PokemonRemixLeague::values),
     HALLOWEEN(1500, PokemonHalloweenLeague::values),
     LOVE(1500, PokemonLoveLeague::values),
     KANTO(1500, PokemonKantoLeague::values),
