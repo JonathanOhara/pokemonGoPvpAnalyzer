@@ -9,7 +9,9 @@ var finalString = "";
 
 $(".rank").each(function(){
     var name = $(this).attr("data");
-    if(name.indexOf("_shadow") === -1 && name.indexOf("_xl") === -1){
+    console.log($(this).html());
+
+    if(name !== undefined && name.indexOf("_shadow") === -1 && name.indexOf("_xl") === -1){
         console.log(this);
         finalString += $(this).attr("data") + "</br>"
     }
