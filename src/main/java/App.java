@@ -9,21 +9,18 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "stunfisk_galarian:10,bastiodon:8,azumarill:6,medicham:5,skarmory:5,ninetales_alolan:5,swampert:4,jellicent:4,umbreon:4,venusaur:4,whimsicott:3,deoxys_defense:3,altaria:3\n";
-            ;
+    private static final String LEADS = "zapdos,sirfetchd,bronzong,lanturn,raichu";
     private static final String BACKS = "";
-
     private static final String OTHER = "";
 
     private static final String SEARCH_STRING = LEADS;
 
     private static final String DEFAULT_LEAGUE = "Great";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
-    private static final String NUMBER_OF_RESULTS = "50";
+    private static final String NUMBER_OF_RESULTS = "100";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         args = resolveArgs(args);
-
 
         League league = League.valueOf(args[0].toUpperCase());
         List<PokemonWithWeight> pokemonInLeagueList =
