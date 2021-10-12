@@ -16,6 +16,7 @@ public enum League {
 
     //SPECIAL
     REMIX(1500, PokemonRemixLeague::values),
+    ULTRAREMIX(2500, PokemonUltraRemixLeague::values),
     RETRO(1500, PokemonRetroLeague::values),
     HALLOWEEN(1500, PokemonHalloweenLeague::values),
     LOVE(1500, PokemonLoveLeague::values),

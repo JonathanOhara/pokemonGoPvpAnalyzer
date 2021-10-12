@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "zapdos,sirfetchd,bronzong,lanturn,raichu";
+    private static final String LEADS = "";
     private static final String BACKS = "";
     private static final String OTHER = "";
 
@@ -17,7 +17,7 @@ public class App {
 
     private static final String DEFAULT_LEAGUE = "Great";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
-    private static final String NUMBER_OF_RESULTS = "100";
+    private static final String NUMBER_OF_RESULTS = "50";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         args = resolveArgs(args);
