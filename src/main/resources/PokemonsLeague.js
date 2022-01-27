@@ -14,20 +14,23 @@ $(".rankings-container > .rank").each( function(){
     var name = pokemonRow.find(".name").html();
     var detailsUrl = pokemonRow.find(".multi-battle-link a").attr("href");
 
-    detailsUrl = detailsUrl.replace("/11/","/{shields}/")
+    if(detailsUrl){
+        detailsUrl = detailsUrl.replace("/11/","/{shields}/")
 
-    console.log(simpleName);
+        console.log(simpleName);
 
-    finalString +=
-        '\n</br>' +
-        simpleName +
+        finalString +=
+            '\n</br>' +
+            simpleName +
 
-        '(' +
-        '"' + name + '"' +
-        ',' + '"' +detailsUrl + '"' +
-        ')' +
+            '(' +
+            '"' + name + '"' +
+            ',' + '"' +detailsUrl + '"' +
+            ')' +
 
-        ',';
+            ',';
+    }
+
 
 });
 finalString = finalString.substring(0, finalString.length - 1);

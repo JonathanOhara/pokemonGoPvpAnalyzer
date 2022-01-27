@@ -2,7 +2,7 @@ package leagues.special;
 
 import leagues.PokemonInLeague;
 
-public enum PokemonRemixLeague implements PokemonInLeague {
+public enum PokemonGreatRemixLeague implements PokemonInLeague {
 
     //Auto Generated
     MEDICHAM_XL("Medicham (XL)","https://pvpoke.com/battle/multi/1500/remix/medicham_xl/{shields}/0-2-4/2-1/141/0/"),
@@ -658,7 +658,7 @@ public enum PokemonRemixLeague implements PokemonInLeague {
     private String name;
     private String url;
 
-    PokemonRemixLeague(String name, String url) {
+    PokemonGreatRemixLeague(String name, String url) {
         this.name = name;
         this.url = url;
     }

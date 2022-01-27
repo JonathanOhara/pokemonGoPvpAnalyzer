@@ -15,13 +15,14 @@ public enum League {
 //    MASTERPREMIER(10000, PokemonUltraLeague::values)
 
     //SPECIAL
-    REMIX(1500, PokemonRemixLeague::values),
+    REMIX(1500, PokemonGreatRemixLeague::values),
     ULTRAREMIX(2500, PokemonUltraRemixLeague::values),
     RETRO(1500, PokemonRetroLeague::values),
     HALLOWEEN(1500, PokemonHalloweenLeague::values),
     LOVE(1500, PokemonLoveLeague::values),
     KANTO(1500, PokemonKantoLeague::values),
-    HOLIDAY(1500, PokemonHolidayLeague::values)
+    HOLIDAY(1500, PokemonHolidayLeague::values),
+    ULTRAPREMIERCLASSIC(2500, PokemonUltraPremierClassicLeague::values)
     ;
 
     private List<PokemonInLeague> availablePokemon;
