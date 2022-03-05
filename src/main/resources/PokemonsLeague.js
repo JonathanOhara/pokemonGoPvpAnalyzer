@@ -5,7 +5,7 @@ leagueNames["1500"] = "Great";
 leagueNames["2500"] = "Ultra";
 leagueNames["10000"] = "Master";
 
-var leagueCp = $(".league-select").val();
+var leagueCp = $(".format-select").val();
 
 $(".rankings-container > .rank").each( function(){
     var pokemonRow = $(this);

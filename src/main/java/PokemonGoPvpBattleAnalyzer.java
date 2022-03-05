@@ -250,6 +250,9 @@ public class PokemonGoPvpBattleAnalyzer {
 			acceptButton.click();
 		}
 
+		//selection all pokemon (by default the only "meta" is choose)
+		driver.findElement(By.cssSelector("#main > div.section.poke-select-container.multi > div:nth-child(3) > div > div.options.multi-battle-options > div > div:nth-child(2) > span")).click();
+
 		if(DISABLE_BAIT_SHIELDS){
 			System.out.print("Disabling Shield baiting...");
 			//expand form
@@ -259,18 +262,18 @@ public class PokemonGoPvpBattleAnalyzer {
 			driver.findElement(By.cssSelector("#main > div.section.poke-select-container.multi > div:nth-child(1) > div.poke-stats > div.options > div.toggle-content > div.check.shield-baiting > span")).click();
 
 			//disable button 2
-			driver.findElement(By.cssSelector("div.poke-stats:nth-child(3) > div:nth-child(2) > div:nth-child(6) > span:nth-child(1)")).click();
-
-			//Re run battles
-			driver.findElement(By.cssSelector("#main > div.section.battle > button.battle-btn.button")).click();
-
-			do{
-				Thread.sleep(500);
-				System.out.print(".");
-			}while(driver.findElements(By.cssSelector(".rankings-container > div")).size() == 0);
+			driver.findElement(By.cssSelector("div.poke-stats:nth-child(2) > div:nth-child(3) > div:nth-child(6) > span:nth-child(1)")).click();
 		}
 
-		List<WebElement> scoreElements = driver.findElements(By.cssSelector(".rankings-container > .rank"));
+		//Re run battles
+		driver.findElement(By.cssSelector("#main > div.section.battle > button.battle-btn.button")).click();
+
+		do{
+			Thread.sleep(500);
+			System.out.print(".");
+		}while(driver.findElements(By.cssSelector(".rankings-container > div")).size() == 0);
+
+		List<WebElement> scoreElements = driver.findElements(By.cssSelector("div.rankings-container:nth-child(4) > .rank"));
 
 		for (WebElement scoreElement : scoreElements) {
 			pokemonScore.put( scoreElement.getAttribute("data"), scoreElement.findElement(By.cssSelector(".star")).getText() );
