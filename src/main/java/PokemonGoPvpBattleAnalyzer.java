@@ -35,7 +35,7 @@ public class PokemonGoPvpBattleAnalyzer {
 	private final boolean IGNORE_WEIGHT 			= false;
 
 	private final boolean SHOW_SHADOW_POKEMON		= true;
-	private final boolean DISABLE_BAIT_SHIELDS		= true;
+	private final boolean DISABLE_BAIT_SHIELDS		= false;
 
 	private final League league;
 
@@ -273,14 +273,20 @@ public class PokemonGoPvpBattleAnalyzer {
 			System.out.print(".");
 		}while(driver.findElements(By.cssSelector(".rankings-container > div")).size() == 0);
 
-		List<WebElement> scoreElements = driver.findElements(By.cssSelector("div.rankings-container:nth-child(4) > .rank"));
+		List<WebElement> scoreElements = driver.findElements(By.cssSelector("div.section:nth-child(11) > div:nth-child(2) > div:nth-child(4) > .rank"));
 
+		if(DEBUG) {
+			System.out.println("Score Elements: " + scoreElements.size());
+		}
 		for (WebElement scoreElement : scoreElements) {
-			pokemonScore.put( scoreElement.getAttribute("data"), scoreElement.findElement(By.cssSelector(".star")).getText() );
+			String data = scoreElement.getAttribute("data");
+			String star = scoreElement.findElement(By.cssSelector(".star")).getText();
+			pokemonScore.put(data, star);
 			if(DEBUG){
-				System.out.println("\tx "+scoreElement.getAttribute("data") + ": "+scoreElement.findElement(By.cssSelector(".star")).getText());
+				System.out.println("\tx "+ data + ": "+ star);
 			}
 		}
+
 
 		driver.quit();
 		return pokemonScore;
