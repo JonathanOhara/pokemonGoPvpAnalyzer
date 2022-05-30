@@ -251,7 +251,7 @@ public class PokemonGoPvpBattleAnalyzer {
 		}
 
 		//selection all pokemon (by default the only "meta" is choose)
-		driver.findElement(By.cssSelector("#main > div.section.poke-select-container.multi > div:nth-child(3) > div > div.options.multi-battle-options > div > div:nth-child(2) > span")).click();
+		driver.findElement(By.cssSelector("div.poke-stats:nth-child(3) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2)")).click();
 
 		if(DISABLE_BAIT_SHIELDS){
 			System.out.print("Disabling Shield baiting...");
@@ -259,10 +259,10 @@ public class PokemonGoPvpBattleAnalyzer {
 			driver.findElement(By.cssSelector("#main > div.section.poke-select-container.multi > div:nth-child(1) > div.poke-stats > div.options > a")).click();
 
 			//disable button 1
-			driver.findElement(By.cssSelector("#main > div.section.poke-select-container.multi > div:nth-child(1) > div.poke-stats > div.options > div.toggle-content > div.check.shield-baiting > span")).click();
+			driver.findElement(By.cssSelector("div.poke:nth-child(1) > div:nth-child(6) > div:nth-child(12) > div:nth-child(4) > div:nth-child(6) > div:nth-child(1)")).click();
 
 			//disable button 2
-			driver.findElement(By.cssSelector("div.poke-stats:nth-child(2) > div:nth-child(3) > div:nth-child(6) > span:nth-child(1)")).click();
+			driver.findElement(By.cssSelector("div.poke-stats:nth-child(3) > div:nth-child(3) > div:nth-child(4) > div:nth-child(1)")).click();
 		}
 
 		//Re run battles

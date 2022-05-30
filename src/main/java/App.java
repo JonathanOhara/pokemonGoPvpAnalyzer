@@ -9,16 +9,16 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "medicham:7,talonflame:5,stunfisk_galarian:4,trevenant:4,walrein:4,swampert:3,jellicent:3,ninetales_alolan:3,hypno:3,venusaur:3,deoxys_defense:3,scrafty:3\n";
-//    private static final String LEADS = "altaria,skarmory,deoxys_defense,trevenant,sableye";
-//    private static final String BACKS = "sableye:86,nidoqueen:81,azumarill:74,medicham:62,walrein:59,stunfisk_galarian:58,trevenant:58,skarmory:48,registeel:46,ninetales_alolan:44,deoxys_defense:40,scrafty:40,altaria:36,obstagoon:30,umbreon:28,swampert:26,bastiodon:24,drapion:22,lickitung:21,talonflame:17,venusaur:14,mandibuzz:14,sirfetchd:14,jellicent:13,victreebel:12,diggersby:11,toxicroak:10,cofagrigus:8,vigoroth:8,wigglytuff:8\n";
+    private static final String LEADS = "registeel:1,walrein:1,altaria:1,talonflame:1,empoleon:1,cofagrigus:1";
+//    private static final String LEADS = "";
+//    private static final String BACKS = "";
     private static final String OTHER = "";
 
     private static final String SEARCH_STRING = LEADS;
 
     private static final String DEFAULT_LEAGUE = "Great";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
-    private static final String NUMBER_OF_RESULTS = "50";
+    private static final String NUMBER_OF_RESULTS = "150";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         args = resolveArgs(args);
