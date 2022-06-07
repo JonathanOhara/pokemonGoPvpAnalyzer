@@ -239,7 +239,7 @@ public class PokemonGoPvpBattleAnalyzer {
 
 		System.out.print("Acessing "+url);
 		do{
-			Thread.sleep(500);
+			Thread.sleep(600);
 			System.out.print(".");
 		}while(driver.findElements(By.cssSelector(".rankings-container > div")).size() == 0);
 		System.out.println();
