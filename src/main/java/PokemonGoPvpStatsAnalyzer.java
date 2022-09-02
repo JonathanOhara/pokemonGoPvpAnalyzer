@@ -29,7 +29,7 @@ public class PokemonGoPvpStatsAnalyzer {
 	public void printByOverallStats() throws IOException, InterruptedException {
 		List<PokemonOverallStat> pokemonStats = new ArrayList<>(league.getAvailablePokemon().size());
 
-		System.setProperty("webdriver.gecko.driver","C:\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver","C:/Users/Jonathan/Documents/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 
 		driver.get("https://pvpoke.com/battle/");

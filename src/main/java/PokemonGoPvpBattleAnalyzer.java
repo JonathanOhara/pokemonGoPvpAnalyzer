@@ -232,7 +232,7 @@ public class PokemonGoPvpBattleAnalyzer {
 
 		System.out.println("Reading data HTTP...");
 
-		System.setProperty("webdriver.gecko.driver","C:\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver","C:/Users/Jonathan/Documents/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 
 		driver.get(url);
