@@ -9,16 +9,18 @@ import java.util.stream.Stream;
 
 public class App {
 
-    private static final String LEADS = "registeel:1,walrein:1,altaria:1,talonflame:1,empoleon:1,cofagrigus:1";
+    private static final String LEADS = "medicham:15,altaria:10,noctowl:10,ninetales_alolan:8,bastiodon:8,trevenant:6,stunfisk_galarian:6,lanturn:6\n";
 //    private static final String LEADS = "";
-//    private static final String BACKS = "";
+
+    //    private static final String LEADS = "";
+    //    private static final String BACKS = "";
     private static final String OTHER = "";
 
     private static final String SEARCH_STRING = LEADS;
 
     private static final String DEFAULT_LEAGUE = "Great";
     private static final String DEFAULT_NUMBER_OF_SHIELDS = "1";
-    private static final String NUMBER_OF_RESULTS = "150";
+    private static final String NUMBER_OF_RESULTS = "400";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         args = resolveArgs(args);
